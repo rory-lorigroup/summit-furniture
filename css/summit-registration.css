@@ -1,0 +1,192 @@
+.afrfb-form-register {
+	position: relative;
+	padding: 9rem 4rem;
+	margin: -2rem auto 2rem;
+	background: white;
+}
+
+#first_name-description {
+	position: absolute;
+	left: 4rem;
+	top: 4rem;
+	text-transform: uppercase;
+	width: calc(100% - 8rem);
+	border-bottom: .5px solid black;
+	display: block !important;
+	padding-bottom: 1rem;
+	font-size: 1.25rem;
+	font-weight: 300;
+}
+
+#business_name-description {
+	text-transform: uppercase;
+	width: calc(100%);
+	border-bottom: .5px solid black;
+	display: block !important;
+	padding-bottom: 1rem;
+	font-size: 1.25rem;
+	font-weight: 300;
+	position: absolute;
+	top: 3rem;
+}
+
+#business_name_field {
+	padding-top: 8rem;
+	position: relative;
+}
+
+.afrfb-form-register p.form-row {
+	display: inline-grid !important;
+}
+
+.afrfb-form-register p.form-row label {
+	letter-spacing: .85px;
+}
+
+.afrfb-form-register .form-row-wide {
+	width: 100% !important;
+}
+
+.afrfb-form-register label.error {
+	font-size: .75rem;
+}
+
+.afrfb-form-register p.form-row label abbr[title] {
+	text-decoration: none !important;
+	color: red;
+}
+
+.afrfb-form-register p.form-row-half:nth-of-type(odd) {
+	padding: 0 0 0 2rem !important;
+}
+
+.afrfb-form-register p.form-row-half:nth-of-type(even) {
+	padding: 0 2rem 0 0 !important;
+}
+
+#post-3650 .afrfb-form-register p.form-row-half:nth-of-type(odd) {
+	padding: 0 2rem 0 0 !important;
+}
+
+#post-3650 .afrfb-form-register p.form-row-half:nth-of-type(even) {
+	padding: 0 0 0 2rem !important;
+}
+
+.afrfb-form-register p.form-row-half:first-of-type,
+#post-3650 .afrfb-form-register p.form-row-half:nth-of-type(4) {
+	padding: 0 2rem 0 0 !important;
+}
+
+.afrfb-form-register p.form-row-half:nth-of-type(2),
+#post-3650 .afrfb-form-register p.form-row-half:nth-of-type(5) {
+	padding: 0 0 0 2rem !important;
+}
+
+.afrfb-form-register p.form-row input {
+	width: 100%;
+	background: white !important;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: .5px solid black;
+	border-radius: 0px;
+	color: black !important;
+}
+
+.afrfb-form-register .select2 {
+	margin-top: .5rem;
+	width: 100% !important;
+}
+
+.afrfb-form-register .select2 .select2-selection {
+	height: auto !important;
+	border-radius: 0px !important;
+}
+
+.afrfb-form-register .select2 .select2-selection .select2-selection__rendered {
+	padding: .5rem !important;
+	text-transform: uppercase;
+}
+
+.afrfb-form-register .select2 .select2-selection .select2-selection__arrow {
+	height: auto !important;
+	top: 50%;
+}
+
+.radio-option {
+	display: flex;
+	margin-bottom: 1rem;
+}
+
+.radio-option:first-of-type {
+	margin-top: 1rem;
+}
+
+.radio-option input {
+	margin: 0 .5rem 0 0;
+	width: min-content !important;
+}
+
+.woocommerce-form-register__submit,
+.woocommerce-form-register__submit:hover {
+	border: 1px solid black;
+	background: white !important;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+
+#shipping_city_field {
+	padding-left: 0 !important;
+	padding-right: 2rem !important;
+}
+
+#shipping_postcode_field {
+	padding-right: 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+	
+	.post-3650,
+	.summit-interior {
+		padding: 1rem 0;
+	}
+	
+	#summitregistration {
+		padding: 4rem 0;
+	}
+	
+	
+	#first_name-description {
+		left: 0;
+		top: 2rem;
+		width: 100%;
+		padding-bottom: .25rem;
+	}
+	
+	.afrfb-form-register p.form-row-half:first-of-type, 
+	#post-3650 .afrfb-form-register p.form-row-half:nth-of-type(4) {
+		margin-top: 2rem;
+	}
+	
+	#post-3650 #summitregistration p.form-row-half,
+	#summitregistration p.form-row-half {
+		padding: 0 !important;
+	}
+	
+	#post-3650 #summitregistration {
+		padding: 4rem 2rem;
+	}
+	
+	#post-3650 #first_name-description {
+		width: 80%;
+		left: 2rem;
+	}
+}
+
+#shipping_country_field .select2:first-of-type,
+#shipping_state_field .select2:first-of-type,
+#word_of_mouth_field .select2:first-of-type,
+#business_description_field .select2:first-of-type {
+	display: none;
+}

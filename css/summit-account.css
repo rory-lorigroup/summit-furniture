@@ -1,0 +1,591 @@
+/* General */
+.page-id-3096 .summit-account-page {
+	background: url('/wp-content/themes/summit-furniture/img/dashboard.webp');
+	padding: 4rem 10% 30%;
+	background-size: cover;
+}
+
+.summit-folders-archive,
+.woocommerce-edit-account.page-id-3096  .summit-account-page,
+.woocommerce-edit-address.page-id-3096  .summit-account-page {
+	background: #f5f5f5;
+	padding: 4rem 10%;
+}
+
+.woocommerce-account .entry-content {
+	margin-top: 0;
+}
+
+.desktop-btn {
+	display: inline-block;
+}
+	
+.mobile-btn {
+	display: none;
+}
+
+/* Header */
+.summit-account-header {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid white;
+	margin-bottom: 3rem;
+	color: white;
+	align-items: center;
+}
+
+.summit-folders-archive .summit-account-header,
+.woocommerce-edit-address.page-id-3096  .summit-account-header,
+.woocommerce-edit-account.page-id-3096  .summit-account-header,
+.summit-single-wishlist .summit-account-header {
+	border-bottom: 1px solid black;
+	color: black;
+}
+
+.summit-account-header h1,
+.summit-account-header h2 {
+	margin: 0;
+}
+
+.summit-account-header h1 {
+	font-size: 2.25rem;
+	margin-bottom: .5rem;
+	font-weight: 100;
+}
+
+.summit-account-header h2 {
+	font-size: 1.5rem;
+}
+
+
+/* Dashboard */
+.summit-account-page .dashboard {
+	display: grid;
+	grid-template-columns: repeat(2, 47.5%);
+	column-gap: 5%;
+}
+
+.summit-account-page .dashboard > div {
+	background: rgba(105, 109, 113, .75);
+	min-height: 250px;
+	margin-bottom: 3rem;
+	padding: 1.5rem;
+	color: white;
+}
+
+.summit-account-page .dashboard > div:last-of-type {
+	grid-row: 2/4;
+/* 	grid-row: 3/5; */
+	grid-column: 2;
+}
+
+.summit-contact-info,
+.summit-trade-rep {
+	position: relative;
+}
+
+.contact-group:nth-of-type(2),
+.contact-group:nth-of-type(3) {
+	margin-top: 1rem;
+}
+
+.contact-info {
+	position: absolute;
+	top: calc(75px + 1rem);
+	left: 1.5rem;
+}
+
+.summit-sales-rep-address span {
+	display: block;
+}
+
+.summit-info {
+	display: grid;
+	align-content: space-between;
+}
+
+.summit-dash-subheader {
+	font-size: 1.5rem;
+	font-weight: 100;
+	padding-bottom: .75rem;
+	border-bottom: 1px solid white;
+	align-items: center;
+}
+
+.summit-dash-subheader .summit-account-btn {
+	float: right;
+}
+
+.summit-account-btn,
+.summit-account-btn:hover
+.summit-account-btn:visited {
+	font-size: .85rem;
+	color: white !important;
+	padding: .25rem 1rem;
+	border: 1px solid white;
+	text-decoration: none;
+	width: max-content;
+	background: transparent;
+}
+
+.summit-single-wishlist .summit-account-btn,
+.summit-single-wishlist .summit-account-btn:hover,
+.summit-single-wishlist .summit-account-btn:visited {
+	color: black !important;
+	border-color: black;
+}
+
+.add-new-address {
+	padding-left: 0 !important;
+}
+
+.summit-info a.wc-address-book-add-shipping-button {
+	background: transparent !important;
+	border: 1px solid white;
+	border-radius: 0;
+	color: white;
+	font-weight: 300;
+	font-size: .85rem;
+	padding: .5rem 1rem;
+}
+
+.summit-account-page .dashboard > div:last-of-type h6,
+.summit-account-page .dashboard > div:last-of-type p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.summit-account-page .dashboard > div:last-of-type h6 {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.summit-account-page .dashboard > div:last-of-type a {
+	font-size: .85rem;
+	color: white !important;
+	text-decoration: none;
+}
+
+.summit-dash-folders {
+	margin: .75rem 0 .75rem .75rem;
+	padding-left: 0;
+}
+
+.summit-dash-folders a,
+.summit-dash-folders a:hover,
+.summit-dash-folders a:visited {
+	font-weight: 400;
+	font-size: .85rem;
+	color: white !important;
+	text-decoration: none;
+}
+
+.summit-dash-folders p {
+	margin: 0;
+	float: right;
+}
+
+.item-details-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+	.summit-account-page .dashboard {
+		display: block;
+	}
+	
+	.contact-info {
+		position: relative;
+	}
+}
+
+/* Account Info */
+.woocommerce-edit-account .summit-edit-account {
+	display: grid;
+	grid-template-columns: repeat(2, 47.5%);
+	column-gap: 5%;
+}
+
+.summit-edit-account legend {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.summit-edit-account legend span {
+	font-weight: 500;
+}
+
+.summit-edit-account input {
+	height: 2rem;
+	border: none;
+	padding: 0 .35rem;
+	background: white !important;
+	color: black;
+}
+
+.summit-edit-account label {
+	margin-left: .35rem;
+}
+
+
+.summit-edit-account abbr.required,
+.summit-edit-account span.required {
+	color: black !important;
+	font-weight: 300 !important;
+}
+
+.summit-edit-account button.button,
+.summit-edit-account button.woocommerce-Button {
+	background: black;
+	color: white;
+	border-radius: 0;
+	font-weight: 400;
+	width: max-content;
+}
+
+/* Folders */
+.summit-folders-archive .summit-folder-wrap {
+	margin-bottom: 4rem;
+}
+
+.summit-folders-archive .summit-folder-wrap:last-of-type {
+	margin-bottom: 0;
+}
+
+.summit-manage-folders-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: .75rem;
+}
+
+.summit-manage-folders-header .summit-account-btn {
+	color: black !important;
+	border-color: black;
+}
+
+.summit-folders-archive .folder-content {
+	background: white;
+	padding: 1.5rem;
+	display: grid;
+	grid-template-columns: repeat(4, 22.5%);
+	gap: 2rem;
+	text-decoration: none;
+	color: black;
+	overflow: hidden;
+	height: 315px;
+}
+
+.summit-folders-archive .folder-content.empty {
+	height: auto;
+	display: block;
+}
+
+.folder-content > div {
+	min-height: calc(310px - 3rem);
+	max-height: 310px;
+}
+
+.folder-view-more {
+	margin: 1rem 0 0 auto;
+}
+
+.folder-view-more {
+	color: black !important;
+	border-color: black;
+}
+
+.folder-view-more:hover {
+	background: black !important;
+	color: white !important;
+}
+
+a.folder-manage,
+a.folder-manage:visited {
+	color: black;
+}
+
+a.folder-manage:hover,
+.folder-view-more:hover {
+	cursor: pointer;
+}
+
+.folder-empty {
+	grid-column: 1/5;
+}
+
+.summit-folders-archive .folder-anchor,
+.summit-folders-archive .folder-anchor:visited,
+.summit-folders-archive .folder-anchor:hover,
+.folder-empty a,
+.folder-empty a:visited,
+.folder-empty a:hover {
+	text-decoration: none;
+	color: black;
+	margin-bottom: .5rem;
+}
+
+.summit-folders-archive .folder-anchor,
+.summit-folders-archive .folder-anchor:visited,
+.summit-folders-archive .folder-anchor:hover {
+	font-size: 1.5rem;
+	display: block;
+	margin-bottom: 0;
+}
+
+.summit-folders-archive .folder-content .product-quant,
+.summit-folders-archive .folder-content .product-name {
+	font-size: .85rem;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.summit-folders-archive .folder-content .product-name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.summit-folders-archive .folder-content .product-quant {
+	flex: 0 0 20%;
+	text-align: right;
+}
+
+/* Single Folder */
+.summit-single-wishlist-wrap {
+	padding: 4rem 0;
+	border-top: 1px solid;
+}
+
+.summit-single-wishlist {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.summit-folder-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.summit-folder-actions .summit-email-share {
+	height: 25px;
+	width: 25px;
+	margin-bottom: -8px;
+}
+
+.summit-single-wishlist-inner {
+	display: grid;
+	grid-template-columns: repeat(4, 22.5%);
+	column-gap: 2rem;
+}
+
+.folder-item {
+	position: relative;
+}
+
+.folder-item .product-remove {
+	position: absolute;
+	right: .5rem;
+	top: .5rem;
+}
+
+.folder-item .product-remove button {
+	background: white;
+	border: 0;
+	border-radius: 100px;
+	padding: .5rem .75rem;
+}
+
+.folder-item .product-remove button:hover {
+	cursor: pointer;
+}
+
+.page .summit-modal,
+.page .tinvwl_added_to_wishlist {
+	opacity: 0;
+}
+
+.folder-hidden-data {
+	position: absolute;
+}
+
+.update-folder {
+	margin: 3rem auto;
+	text-align: right;
+}
+
+input.qty {
+	border: .5px solid black;
+	padding: .25rem;
+}
+
+/* Shipping */
+.woocommerce-edit-address form.summit-edit-account {
+	display: inline-block;
+	width: 47.5%;
+}
+
+.woocommerce-edit-address form.summit-edit-account + .shipping_address_book {
+	width: 47.5%;
+	float: right;
+}
+
+.woocommerce-edit-address form.summit-edit-account span.required {
+	float: right;
+}
+
+.woocommerce-edit-address form.summit-edit-account .select2-container--default .select2-selection--single {
+	border: none;
+	border-radius: 0;
+	height: 2rem;
+}
+
+.woocommerce-edit-address form.summit-edit-account p {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.addresses.address-book {
+	padding: 2rem;
+	background: white;
+}
+
+.addresses.address-book .summit-address-title a {
+	font-weight: 300;
+	font-style: normal;
+	margin-bottom: 1rem;
+	color: black;
+	text-decoration: none;
+	display: block;
+}
+
+.addresses.address-book .wc-address-book-address:last-of-type .summit-address-title a {
+	margin-bottom: 0;
+}
+
+.wc-address-book-meta {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.summit-folders-archive, 
+	.woocommerce-edit-account.page-id-3096 .summit-account-page, 
+	.woocommerce-edit-address.page-id-3096 .summit-account-page {
+		padding: 2rem;
+	}
+	
+	.summit-single-wishlist-wrap {
+		padding: 2rem 2rem 0;
+	}
+	
+	.summit-single-wishlist {
+		width: 100%;
+	}
+	
+	.summit-account-header {
+		margin-bottom: 1rem;
+	}
+	
+	.summit-account-header h1 {
+		font-size: 1.75rem;
+	}
+	
+	.summit-account-header h2 {
+		display: none;
+	}
+	
+	h3.product-name {
+		font-size: .85rem;
+	}
+	
+	input.qty {
+		font-size: 0.75rem;
+  		margin: .5rem 0;
+	}
+	
+	.summit-folders-archive .folder-content {
+		grid-template-columns: repeat(2, 47.5%);
+		gap: 1rem;
+	}
+	
+	.item-details-wrapper {
+		display: block;
+	}
+	
+	.summit-folders-archive .folder-content .product-name {
+		overflow: visible;
+		white-space: normal;
+	}
+	
+	.summit-folders-archive .folder-content .product-quant {
+		display: none;
+	}
+	
+	.folder-content > div {
+		max-height: unset;
+		min-height: unset;
+	}
+	
+	.summit-folders-archive .folder-content {
+		height: 430px;
+	}
+	
+	.desktop-btn {
+		display: none;
+	}
+	
+	.mobile-btn {
+		display: inline-block;
+		font-size: 83.5%;
+		color: black !important;
+		border-color: black;
+	}
+	
+	.folder-manage {
+		margin-top: .35rem;
+	}
+	
+	.woocommerce-edit-account .summit-edit-account {
+		display: block;
+	}
+	
+	.woocommerce-edit-address form.summit-edit-account {
+		display: block;
+		width: 100%;
+	}
+	
+	.woocommerce-edit-address form.summit-edit-account + .shipping_address_book {
+		float: none;
+  		width: 100%;
+  		margin-top: 4rem;
+	}
+	
+	.summit-folder-wrap .folder-view-more:hover,
+	.summit-folder-wrap .mobile-btn:hover {
+		cursor: pointer;
+		background: black !important;
+		color: white !important;
+	}
+	
+	.summit-single-wishlist-inner {
+		grid-template-columns: repeat(2, auto);
+  		gap: 2rem;
+	}
+	
+	.update-folder {
+		display: flex;
+  		flex-wrap: wrap;
+  		gap: .5rem;
+	}
+	
+	.update-folder .tinvwl-button {
+		border-width: 1px !important;
+  		font-weight: 300;
+  		font-size: 83.5%;
+  		text-transform: capitalize;
+	}
+}

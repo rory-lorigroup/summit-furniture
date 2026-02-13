@@ -1,0 +1,90 @@
+.summit-interior-fabrics {
+	width: 80%;
+	margin: 2rem auto 4rem;
+	max-width: 1140px;
+}
+
+img.fabrics-hero,
+img.finishes-hero {
+	width: 100%;
+	aspect-ratio: 2.5/1 !important;
+}
+
+.summit-interior-fabrics h1 {
+	margin-top: 0 !important;
+}
+
+.summit-fabrics .fabric-group,
+.summit-fabrics .finishes-group {
+	display: flex;
+ 	gap: 1.125rem;
+ 	flex-wrap: wrap;
+	margin-bottom: 3.5rem;
+}
+
+.summit-fabrics .fabric-group img {
+	height: 175px;
+	width: 175px;
+	object-fit: cover;
+}
+
+.single-finish {
+	width: 200px;
+}
+
+.summit-tabs-wrap {
+	display: flex;
+	border-bottom: 1px solid;
+	grid-column: 1/4;
+	margin-bottom: 3rem;
+	position: relative;
+}
+
+.summit-fabric-tab {
+	padding: 2.5rem 2rem 1rem;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.summit-fabric-tab:first-of-type {
+	padding-left: 0;
+}
+
+.summit-nina-campbell-fabrics {
+	display: none;
+}
+
+@media only screen and (max-width: 800px) {
+	.summit-fabrics .fabric-group,
+	.summit-fabrics .finishes-group {
+		gap: .75rem;
+		margin-bottom: 1.75rem;
+	}	
+
+	.summit-fabric-tab {
+		padding: 1rem;
+	}
+	
+	.summit-fabrics .fabric-group img {
+		height: 100px;
+		width: 100px;
+	}
+	
+	.single-finish {
+		width: 100px
+	}
+	
+	.summit-interior-fabrics .summit-furniture-header {
+		margin-bottom: 1rem;
+	}
+	
+	.summit-fabric-tab {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	.fabric-group .single-fabric, 
+	.finishes-group .single-finish {
+		flex: 0 0 calc(33.33% - .5rem);
+	  }
+}

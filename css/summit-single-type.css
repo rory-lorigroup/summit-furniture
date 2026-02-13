@@ -1,0 +1,138 @@
+.summit-type {
+	padding: 4rem 0;
+	border-top: 1px solid;
+}
+
+.summit-type header {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.summit-type .summit-type-products-wrap {
+	width: 80%;
+	margin: 3rem auto 0;
+	max-width: 1360px;
+}
+
+ul.summit-filters {
+	list-style: none;
+	width: 80%;
+	margin: 1rem auto 0;
+	padding: 0;
+	display: flex;
+	justify-content: left;
+	text-transform: uppercase;
+}
+
+ul.summit-filters li {
+	padding: 0 1rem;
+}
+
+ul.summit-filters li:first-of-type {
+	padding-left: 0;
+}
+
+ul.summit-filters li a {
+	color: black;
+	font-size: 13px !important;
+}
+
+ul.summit-filters li a:hover {
+	cursor: pointer;
+}
+
+.summit-type-products-wrap {
+	display: grid;
+	grid-template-columns: repeat(4, 23%);
+	column-gap: 2%;
+}
+
+.summit-type-products-wrap .type-product {
+	margin-bottom: 2rem;
+	width: 23.5%;
+	height: 350px;
+}
+
+.summit-type-products-wrap .type-product a {
+	text-decoration: none;
+}
+
+.summit-type-products-wrap .type-product h4 {
+	text-transform: uppercase;
+	color: black;
+	margin-top: .5rem;
+}
+
+.dropdown-toggle {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.summit-type {
+		padding-top: 2rem;
+	}
+	
+	a.back-to-all-link {
+		display: none;
+	}
+	
+	ul.summit-filters {
+		flex-wrap: wrap;
+    	gap: 1rem;
+	}
+	
+	ul.summit-filters li {
+		padding: 0;
+	}
+	
+	.summit-type-products-wrap .type-product {
+		width: 46%;
+		height: auto;
+		margin-bottom: 2rem;
+	}
+	
+	.dropdown-toggle {
+		display: block;
+    	width: 100px;
+    	margin: 1rem 10% 2rem auto;
+    	border-bottom: 1px solid #333a47;
+    	padding: .25rem .5rem;
+		position: relative;
+	}
+	
+	.dropdown-toggle.open-toggle {
+		margin-bottom: 0;
+	}
+	
+	.dropdown-toggle:hover {
+	cursor: pointer;
+}
+
+.dropdown-toggle::after {
+	content: '\00d7';
+	display: inline;
+	font-size: 1.5rem;
+	font-weight: 100;
+	position: absolute;
+	right: .2rem;
+	bottom: 0;
+	transform: rotate(45deg);
+	transition: all .2s linear;
+}
+
+.dropdown-toggle.open-toggle::after {
+	transform: rotate(0deg);
+	transition: all .2s linear;
+}
+	
+	ul.summit-filters {
+		display: none;
+	}
+	
+	ul.summit-filters.open-toggle {
+		display: flex;
+		background: #f5f5f5;
+		padding: .75rem;
+		margin-top: 0;
+	}
+}

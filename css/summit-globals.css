@@ -1,0 +1,219 @@
+.site-main {
+	background: white;
+}
+
+.summit-furniture-header {
+	border-bottom: 1px solid #818181;
+	margin-bottom: 3rem;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summit-furniture-header h1,
+.summit-furniture-header h6 {
+	font-size: 2rem;
+	margin-bottom: .5rem;
+	font-weight: 100;
+	font-family: 'Roboto' !important;
+}
+
+.summit-furniture-header .summit-email-share,
+.summit-furniture-header .addtoany_shortcode {
+	margin-bottom: -2rem;
+	height: 30px;
+	width: 30px;
+}
+
+.summit-furniture-header .header-link {
+	color: black;
+	text-decoration: none;
+	margin-bottom: -1rem;
+	text-transform: uppercase;
+}
+
+.summit-archive-actions {
+	display: flex;
+}
+
+.back-to-all-link:before {
+	content: url('/wp-content/themes/summit-furniture/img/ReturnArrow.svg');
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	margin-right: 5px;
+}
+
+.back-to-all-link:visited,
+.back-to-all-link {
+	margin-bottom: -1.5rem;
+	margin-right: 15px;
+	text-transform: uppercase;
+	color: black;
+	text-decoration: none !important;
+	font-size: 12px;
+	display: flex;
+	align-self: center;
+}
+
+a.narrow-border {
+	border-width: .5px !important;
+}
+
+.full-cover {
+	height: calc(100vh - 100px) !important;
+}
+
+.summit-login-modal,
+.summit-modal.social {
+	position: fixed;
+	z-index: -1000;
+	width: 600px;
+	height: 0;
+	background: #333a47;
+	left: calc(50% - 300px);
+	top: calc(50% - 225px);
+	color: white;
+	outline: 7px double white;
+	outline-offset: -1rem;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	transform: height .4s ease-in-out;
+	opacity: 0;
+}
+
+.summit-modal.open-modal {
+	width: 60%;
+    left: 20%;
+}
+
+.summit-modal.social #sfms_email {
+	background: white !important;
+}
+
+.summit-modal.social #sfms_submit:hover {
+	border-color: white !important;
+}
+
+.summit-modal.social .sf-signup-message {
+	max-width: 80%;
+}
+
+.summit-modal.open-modal,
+.summit-login-modal.open-modal {
+	z-index: 10000;
+	height: 450px;
+	transform: height .4s ease-in-out;
+	opacity: 1 !important;
+}
+
+.summit-login-modal form {
+	width: 100%;
+	max-width: 100%;
+}
+
+.summit-login-modal form input,
+.summit-login-modal form input:focus,
+.summit-login-modal form input:focus-visible {
+	background: transparent;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid white;
+	color: white;
+	outline: none;
+}
+
+.summit-login-modal form p {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.summit-login-modal form p.login-remember {
+	display: none;
+}
+
+.summit-login-modal #wp-submit,
+.summit-login-modal a.summit-btn,
+button.summit-btn {
+	background: transparent;
+	border: 1px solid white;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-family: 'Roboto';
+	color: white;
+	border-radius: 0;
+}
+
+.summit-login-modal a.summit-btn {
+	padding: .25rem .5rem;
+	text-align: center;
+}
+
+@media only screen and (max-width: 768px){
+	a:focus {
+		outline: 1px dotted !important;
+	}
+	
+	.home .full-cover {
+		height: 400px !important;
+		min-height: unset !important;
+	}
+	
+	.full-cover {
+		height: 250px !important;
+  		min-height: unset;
+	}
+	
+	.summit-furniture-header h1,
+	.summit-furniture-header h6 {
+		margin-top: 0;
+		font-size: 1.75rem;
+		line-height: 1.1;
+	}
+	
+	.summit-collection .back-to-all-link {
+		display: none;
+	}
+
+	.summit-furniture-header h1,
+	.summit-collection h1 {
+		line-height: 1.1;
+	}
+	
+	.summit-furniture-header .summit-email-share, 
+	.summit-furniture-header .addtoany_shortcode {
+		margin-bottom: -.5rem;
+	}
+	
+	.summit-interior-dark {
+		padding-top: 1rem;
+	}
+	
+	.summit-modal.social {
+		width: 90% !important;
+		left: 5% !important;
+		height: auto !important;
+		top: 25% !important;
+	}
+
+	.summit-modal.social .sf-signup-wrapper h2 {
+		margin-top: 2.5rem;
+    	line-height: 1;
+	}
+	
+	.summit-modal.social #sfms_submit,
+	.summit-modal.social #sfms_email {
+		border-radius: 0px !important;
+	}
+	
+	.summit-modal.social form {
+		flex-direction: column;
+    	align-items: center;
+	}
+}
+
+.summit-retail-trigger {
+	cursor: pointer;
+}

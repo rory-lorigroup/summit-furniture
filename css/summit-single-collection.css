@@ -1,0 +1,216 @@
+.collection-cover {
+    width: 100%;
+/*  aspect-ratio: 2.5/1; */
+    object-fit: cover;
+/* 	object-position: center 70%; */
+}
+
+.collection-cover.mobile {
+	display: none;
+}
+
+.summit-collection {
+	margin: 4rem auto;
+	width: 80%;
+}
+
+.summit-collection .summit-furniture-header {
+	margin-bottom: 3rem !important; 
+}
+
+.summit-collection h1 {
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 2rem;
+}
+
+.summit-collection .summit-collection-info {
+	margin: 0 0 4rem;
+}
+
+.summit-collection .summit-collection-info p {
+	max-width: 60%;
+}
+
+.summit-collection header {
+	position: relative;
+}
+
+.summit-collection-products-wrap {
+	display: grid;
+	grid-template-columns: repeat(4, 23%);
+	column-gap: 2%;
+}
+
+.summit-collection-products-wrap .collection-product {
+	margin-bottom: 2rem;
+}
+
+.summit-collection-products-wrap .collection-product a {
+	text-decoration: none;
+}
+
+.summit-collection-products-wrap .collection-product h4 {
+	text-transform: uppercase;
+	color: black;
+	margin-top: .5rem;
+	font-family: 'Roboto' !important;
+}
+
+.summit-collection-designer {
+	display: grid;
+	grid-template-columns: 60% 37%;
+	column-gap: 3%;
+	background: #f7f7f7;
+	padding: 3rem 5%;
+	position: relative;
+	width: 100%;
+}
+
+.summit-collection-designer h6 {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1rem;
+	position: absolute;
+	top: 0;
+	left: 5%;
+}
+
+.summit-designer-info {
+	display: grid;
+}
+
+h4.summit-designer-name {
+	font-size: 2.5rem;
+	font-weight: 200;
+	margin-bottom: 0;
+    align-self: end;
+}
+
+.summit-designer-info p {
+	margin-bottom: 0rem;
+	margin-top: 10px;
+	font-weight: 100;
+}
+
+.collection-gallery {
+	position: relative;
+}
+
+.collection-gallery-spacer:before {
+	content: '';
+	width: 100%;
+	height: .5px;
+	background: black;
+	display: block;
+	margin: 3rem auto;
+}
+
+.collection-gallery-spacer.spacer-top:before {
+	margin-top: 1rem;
+}
+
+.collection-gallery img {
+	width: 32%;
+	margin-bottom: 20px;
+}
+
+.collection-mobile-cover-slider {
+	display: none;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+	.summit-collection {
+		margin-top: 2rem;
+	}
+	
+	.collection-cover-slider {
+		display: none;
+	}
+	
+	.collection-mobile-cover-slider {
+		display: block;
+		margin-bottom: 1.5rem !important;
+	}
+	
+	.summit-collection .summit-collection-info p {
+		max-width: 80%;
+	}
+	
+	.summit-collection-products-wrap {
+		grid-template-columns: repeat(2, 48%);
+		column-gap: 4%;
+	}
+	
+	.summit-collection-designer {
+		display: flex; 
+		flex-direction: column-reverse;
+	}
+	
+	h4.summit-designer-name {
+		margin-top: 0;
+	}
+	
+	.summit-designer-headshot {
+		margin-top: 2rem;
+	}
+	
+	.collection-gallery {
+		display: block;
+	}
+	
+	.summit-furniture-header  .addtoany_shortcode {
+		margin-bottom: -1rem;
+	}
+	
+	.collection-gallery img {
+		width: 47%;
+	}
+}
+
+@media only screen and (max-width: 480px) { 
+	
+	.summit-collection h1 {
+		font-size: 2rem;
+		padding-bottom: 0;
+	}
+	
+	.summit-collection .addtoany_shortcode {
+		margin-bottom: -.5rem;
+	}
+	
+	.summit-collection .summit-collection-info p {
+		max-width: 100%;
+	}
+	
+	.collection-gallery img {
+		width: 46%;
+	}
+	
+	h4.summit-designer-name {
+		margin-top: .75rem;
+		font-size: 2rem;
+	}
+	
+	.collection-cover {
+		display: none;
+	}
+	
+	.collection-cover.mobile {
+		display: block;
+		margin-bottom: 2rem;
+	}
+}
+
+.summit-downloads {
+	gap: 1.5rem;
+	justify-items: center;
+}
+
+.summit-downloads a {
+	background: #333a47;
+	color: white;
+	width: 100%;
+  	text-align: center;
+}

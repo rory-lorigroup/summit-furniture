@@ -1,0 +1,71 @@
+.summit-designer {
+	display: grid;
+	grid-template-columns: 70% 27%;
+	column-gap: 3%;
+	background: #f7f7f7;
+	padding: 3rem 5%;
+	position: relative;
+	width: 100%;
+	align-items: end;
+}
+
+.summit-designer-info {
+	display: grid;
+}
+
+h4.summit-designer-name {
+	font-size: 2.5rem;
+	font-weight: 200;
+	margin-bottom: 0;
+    align-self: end;
+}
+
+.summit-designer-info p {
+	margin-bottom: 0rem;
+	font-weight: 100;
+}
+
+.summit-designer-products {
+	margin: 4rem auto;
+	width: 80%;
+}
+
+.summit-designer-products-wrap {
+	display: grid;
+	grid-template-columns: repeat(4, 23%);
+	column-gap: 2%;
+}
+
+.summit-designer-products-wrap .designer-product {
+	margin-bottom: 2rem;
+}
+
+.summit-designer-products-wrap .designer-product a {
+	text-decoration: none;
+}
+
+.summit-designer-products-wrap .designer-product h4 {
+	text-transform: uppercase;
+	color: black;
+	margin-top: .5rem;
+}
+
+.summit-designer-products a.back-to-all-link {
+	text-align: center;
+	display: block;
+	margin: 0rem auto 0;
+	border-top: .5px solid;
+	padding-top: 3rem;
+}
+
+@media only screen and (max-width: 800px) {
+	.summit-designer {
+		display: flex;
+    	flex-direction: column-reverse;
+	}
+	
+	.summit-designer-products-wrap {
+		grid-template-columns: repeat(2, 48%);
+		column-gap: 4%;
+	}
+}

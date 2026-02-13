@@ -1,0 +1,778 @@
+/*
+ * Summit Single Product CSS
+ */
+
+/* General Layout */
+.single-product .site-main {
+	border-top: 1px solid;
+	background: white;
+}
+
+.product {
+	max-width: 1440px;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 3rem;
+	padding-top: 4rem;
+}
+
+.woocommerce div.product div.summary {
+	position: relative;
+	float: none;
+	width: 50%;
+	margin-top: 0rem;
+}
+
+.summit-product h1.product_title {
+	display: block;
+	letter-spacing: 1.1px;
+	margin-top: 3rem !important;
+	font-weight: 100;
+}
+
+.summit-product .addtoany_list a img {
+	margin-bottom: -5px;
+}
+
+.summit-fabric-meta {
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.summit-product ~ .cart,
+.posted_in,
+.related.products {
+	display: none !important;
+}
+
+/* Images */
+.woocommerce div.product div.images {
+	margin-bottom: 3.5rem;
+	width: 45%;
+}
+
+.woocommerce div.product div.images div.woocommerce-product-gallery__wrapper,
+.woocommerce div.product div.images .flex-viewport{
+	position: relative;
+}
+
+.woocommerce div.product div.images .summit-gallery-trigger {
+	right: 0;
+	bottom: 0;
+	position: absolute !important;
+	height: 35px;
+	width: 35px;
+	background: #373a42;
+	display: block;
+}
+
+.woocommerce div.product div.images .summit-gallery-trigger:hover {
+	cursor: pointer;
+}
+
+.woocommerce div.product div.images .summit-gallery-trigger:before {
+	content: '';
+	display: block;
+	height: 70%;
+	width: 1px;
+	background: white;
+	margin: 15% auto 0;
+}
+
+.woocommerce div.product div.images .summit-gallery-trigger:after {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 70%;
+	background: white;
+	margin: -35% auto 0;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs {
+	display: grid;
+	grid-template-columns: repeat(3, 31.33%);
+	column-gap: 3%;
+	flex-wrap: wrap;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+	padding-top: 1rem;
+	width: 100%;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li img {
+	aspect-ratio: 1/1 !important;
+	object-fit: cover;
+}
+
+/* Product Video in Gallery */
+.summit-product-video-slide {
+	width: 100%;
+}
+
+.summit-product-video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 aspect ratio */
+	height: 0;
+	overflow: hidden;
+}
+
+.summit-product-video-wrapper iframe,
+.summit-product-video-wrapper video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Video thumbnail play icon overlay */
+.flex-control-thumbs .summit-video-thumb {
+	position: relative;
+}
+
+.flex-control-thumbs .summit-video-thumb::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 40px;
+	height: 40px;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+.flex-control-thumbs .summit-video-thumb::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-40%, -50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 0 8px 14px;
+	border-color: transparent transparent transparent #fff;
+	z-index: 1;
+	pointer-events: none;
+}
+
+/* Quick Ship */
+.quick-ship-tag {
+	position: absolute;
+	padding: .5rem .75rem;
+	background: #333a47;
+	color: white;
+	text-transform: uppercase;
+}
+
+/* Save and Share */
+.summit-save-and-share {
+	display: flex;
+	justify-content: right;
+	align-items: end;
+}
+
+.summit-save-and-share a {
+	font-size: 0;
+}
+
+.summit-save-and-share .summit-email-share {
+	margin-right: 1rem;
+}
+
+.summit-save-and-share .tinvwl_add_to_wishlist_button {
+	height: 100% !important;
+}
+
+.summit-save-and-share img {
+	height: 18px !important;
+	width: 22px !important;
+	max-height: unset !important;
+}
+
+.summit-save-and-share img.product-login {
+	width: auto !important;
+}
+
+.summit-save-and-share img.product-login:hover {
+	cursor: pointer;
+}
+
+.summit-save-and-share .tinv-wishlist {
+	display: grid;
+}
+
+/* Save to Folder Modal */
+.summit-modal-icon {
+	width: 17.5px;
+	position: absolute;
+	right: 2rem;
+}
+
+.summit-modal img.wp-post-image {
+	height: 200px;
+	width: 200px;
+	margin: 0;
+}
+
+.product-title {
+	margin-top: 6px;
+	font-weight: 400;
+}
+
+.already-in {
+	display: none !important;
+}
+
+.summit-modal-close {
+	position: absolute !important;
+	width: 25px;
+	height: 25px;
+	right: -.75rem;
+	top: -.75rem;
+	border-radius: 50% !important;
+	display: grid !important;
+	align-items: center;
+	padding: 0 !important;
+}
+
+.summit-modal-close span {
+	font-size: 16px;
+}
+
+input.summit-new-folder,
+.summit-hide-blank {
+	background: #f5f5f5;
+	height: 40px;
+	border: none;
+}
+
+.summit-folder-add-button {
+	text-transform: uppercase;
+	background: white !important;
+	border: 1px solid !important;
+	width: fit-content !important;
+	border-radius: 0px !important;
+	font-weight: 300 !important;
+	color: black !important;
+	margin-top: 1.5rem !important;
+	font-size: .8rem !important;
+}
+
+.icon_big_heart_check {
+	display: none;
+}
+
+/* Product Info */
+.summit-product {
+	margin-bottom: 4rem;
+}
+
+.fabric-coll {
+	font-weight: 500;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+.price,
+.sku_wrapper {
+	display: none;
+}
+
+.sku {
+	font-weight: 400;
+}
+
+.product_meta {
+	padding-top: 3vh;
+	width: 100%;
+}
+
+.summit-product p.summit-price {
+	font-weight: 400;
+	margin-bottom: 0.25rem !important;
+}
+
+/* Dropdown */
+.summit-dropdown {
+	margin-bottom: 3rem;
+}
+
+.summit-dropdown:last-of-type {
+	margin-bottom: 0rem;
+}
+
+.dropdown-toggle {
+	font-weight: 300;
+	text-transform: uppercase;
+	border-bottom: .75px solid;
+	padding-bottom: .75rem;
+	margin-bottom: .75rem;
+	position: relative;
+	font-family: 'Roboto' !important;
+}
+
+.dropdown-toggle:hover {
+	cursor: pointer;
+}
+
+.dropdown-toggle::after {
+	content: '\00d7';
+	display: inline;
+	font-size: 1.5rem;
+	font-weight: 100;
+	position: absolute;
+	right: 0;
+	bottom: .5rem;
+	transform: rotate(45deg);
+	transition: all .2s linear;
+}
+
+.dropdown-toggle.open-toggle::after {
+	transform: rotate(0deg);
+	transition: all .2s linear;
+}
+
+.dimensions .dropdown-toggle.open-toggle::after {
+	display: none;
+}
+
+.summit-dropdown h6 {
+	margin-bottom: 0;
+	margin-top: .5rem;
+	font-size: 12px;
+	font-weight: 300;
+}
+
+
+.summit-dropdown li,
+.summit-dropdown p,
+.summit-dropdown a {
+	font-size: 13px;
+	color: black;
+}
+
+.summit-dropdown p,
+.summit-dropdown a {
+	font-weight: 200;
+}
+
+.dimensions.summit-dropdown li {
+	font-weight: 100;
+}
+
+.dropdown-content {
+	display: grid;
+	grid-template-columns: repeat(3, 33.33%);
+	opacity: 0;
+	position: absolute;
+	width: 0;
+}
+
+.product-care .dropdown-content {
+	display: block;
+}
+
+.open-toggle + .dropdown-content {
+	width: 100%;
+	opacity: 1;
+	position: relative;
+	transition: opacity .75s linear;
+}
+
+.product-care .open-toggle + .dropdown-content h6 + p {
+	margin-top: 0;
+}
+
+.dropdown-content ul,
+.dropdown-content ul li {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.fabrics .dropdown-content {
+	width: 100vw;
+	margin-left: -49vw;
+	padding: 3rem 5rem 5rem;
+	background: #f5f5f5;
+	margin-top: 3rem;
+	z-index: -1;
+}
+
+.fabrics .open-toggle + .dropdown-content {
+	z-index: 10;
+}
+
+.fabrics .summit-nina-campbell-fabrics,
+.fabrics .summit-finishes {
+	display: none;
+}
+
+.summit-tabs-wrap {
+	display: flex;
+	border-bottom: 1px solid;
+	grid-column: 1/4;
+	margin-bottom: 3rem;
+	position: relative;
+}
+
+.summit-fabric-tab {
+	padding: 1.5rem 2rem;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.summit-fabric-tab:first-of-type {
+	padding-left: 0;
+}
+
+.fabrics .summit-fabric-content {
+	grid-column: 1/4;
+}
+
+.fabric-family {
+	text-transform: uppercase;
+	font-size: .85rem;
+	margin-bottom: .5rem;
+}
+
+.finishes-group,
+.fabric-group {
+	display: flex;
+	column-gap: 1rem;
+	margin-bottom: 3rem;
+	flex-wrap: wrap;
+	row-gap: 2rem;
+}
+
+.finishes-group .single-finish,
+.fabric-group .single-fabric {
+	flex: 0 0 7.5%;
+}
+
+.single-finish img {
+	height: 95px;
+}
+
+/* Summit 3D Viewer and Resources */
+.summit-3d {
+	display: grid;
+	grid-template-columns: 74% 26%;
+	position: relative;
+	z-index: 10;
+}
+
+.summit-resources {
+	padding: 1rem;
+	background: #373a42;
+	display: grid;
+}
+
+.summit-3d div:first-of-type.summit-resources {
+	grid-column: 1/3;
+	grid-template-columns: 50% 50%;
+}
+
+.summit-3d div:first-of-type.summit-resources .all-resources {
+	grid-column: 1;
+	grid-row: 1;
+	height: fit-content;
+}
+
+
+.summit-3d div:first-of-type.summit-resources .trade-resources {
+	grid-column: 2;
+	grid-row: 1;
+	height: fit-content;
+}
+
+.summit-resources a {
+	color: white;
+	text-decoration: none;
+	margin-bottom: .75rem;
+}
+
+.all-resources a:last-of-type {
+	margin-bottom: 0;
+}
+
+.trade-resources {
+	display: grid;
+	align-content: start;
+}
+
+.all-resources {
+	display: grid;
+	align-content: end;
+}
+
+/* Related Products */
+.summit-related-products-wrap {
+	margin: 5rem auto;
+	width: 100%;
+}
+
+.summit-related-products-wrap h2 {
+	font-size: 1.25rem;
+	font-weight: 100;
+	border-top: 1px solid;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.summit-related-products-wrap h2 strong {
+	font-weight: 300;
+}
+
+.summit-related-products {
+	display: grid;
+}
+
+.summit-related-products .slick-list {
+	overflow: hidden;
+	margin-right: -50px;
+}
+
+.summit-slide {
+	padding-right: 50px;
+}
+
+.summit-slide h4 a {
+	text-decoration: none;
+	color: black;
+	font-family: 'Roboto';
+}
+
+.slick-dots {
+	bottom: -50px !important;
+}
+
+.slick-dots li button::before {
+	font-size: 20px !important;
+}
+
+/* Product Designer */
+.summit-designer-wrap {
+	display: grid;
+	grid-template-columns: 20% 75%;
+	column-gap: 3rem;
+	background: #f7f7f7;
+	padding: 3rem;
+	margin-bottom: 6rem;
+	position: relative;
+}
+
+.summit-designer-wrap:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: black;
+	grid-column: 1/3;
+    position: absolute;
+    bottom: -5rem;
+}
+
+.summit-designer-info h4 {
+	font-size: 1.25rem;
+	margin: 0;
+}
+
+.summit-designer-info p:last-of-type {
+	margin-bottom: 0 !important;
+}
+
+/* Fabrics */
+.woocommerce div.product form.cart .variations th.label {
+	display: none;
+}
+
+/* Login and Pricing */
+.summit-login a {
+	color: black;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+/* Lightbox */
+.pswp__img {
+	margin: 2rem 0rem !important;
+	max-height: calc(100vh - 11rem);
+  	object-fit: contain;
+}
+
+.pswp__button--arrow--left {
+	margin-left: 3rem;
+}
+
+.pswp__button--arrow--right {
+	margin-right: 3rem;
+}
+
+.pswp__caption {
+	display: grid;
+	bottom: unset;
+	width: 25%;
+	left: 4rem;
+	top: 44px;
+	color: white;
+	background: transparent !important;
+	padding-right: 4rem;
+}
+
+.pswp__top-bar,
+.pswp__bg {
+	background-color: #333a47 !important;
+}
+
+.pswp__caption__center {
+	display: none !important;
+}
+
+.summit-lb-product-title {
+	margin-bottom: 0px;
+	font-size: 1.5rem;
+	line-height: 1.1;
+}
+
+.summit-lb-product-sku {
+	margin: 1.5rem 0 .25rem;
+}
+
+.summit-lb-product-tearsheet {
+	color: white;
+	text-decoration: none;
+}
+
+.summit-lb-product-tearsheet:visited,
+.summit-lb-product-tearsheet:hover {
+	color: white !important;
+	text-decoration: underline;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 1180px) {
+	.woocommerce div.product div.images {
+		width: 40%;
+	}
+	
+	.fabrics .dropdown-content {
+		margin-left: -103%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.woocommerce div.product div.images,
+	.woocommerce div.product div.summary {
+		width: 100%;
+	}
+	
+	.product {
+		padding-top: 2rem;
+	}
+	
+	.summit-designer-info h4 {
+		margin-top: 4px;
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	.fabrics .dropdown-content {
+		margin-left: -5.5%;
+		padding: 2rem;
+	}
+	
+	.summit-fabric-tab {
+		padding: 1rem 0rem 1rem;
+	}
+	
+	.finishes-group .single-finish {
+		flex: 0 0 21.5%;
+	} 
+	
+	.fabric-group .single-fabric {
+		flex: 0 0 16.5%;
+	}
+	
+	.finishes-group, 
+	.fabric-group {
+		row-gap: .75rem;
+	}
+	
+	.summit-designer-wrap,
+	.summit-3d {
+		display: block;
+	}
+	
+	.summit-related-products-wrap {
+		margin: 2.5rem auto;
+	}
+	
+	.slick-track {
+    	display: flex;
+    	margin: 0 -20px;
+		overflow-x: hidden;
+	}
+	
+	.slick-slide {
+		padding-right: 0;
+		margin: 0 20px;
+	}
+	
+	.slick-slide.slick-active + .slick-slide.slick-active + .slick-slide {
+		visibility: hidden;
+	}
+	
+	.slick-slide.slick-active {
+		margin-right: 5px !important;
+		visibility: visible;
+	}
+
+	
+	.summit-slide {
+		padding-right: 0;
+	}
+	
+	.summit-designer-wrap::after {
+		width: 80%;
+	}
+	
+	.summit-designer-info h4 {
+    	margin-top: 1.25rem;
+		margin-bottom: -.5rem;
+	}
+	
+	.summit-3d div:first-of-type.summit-resources {
+		display: block;
+	}
+	
+}
+
+/* Quick Ship Info Box */
+.quick-ship-info-box {
+	background: #f7f7f7;
+	padding: 1.5rem;
+	margin-top: 2rem;
+}
+
+.quick-ship-info-box h4 {
+	text-transform: uppercase;
+	margin-top: 0;
+	font-weight: 400;
+}
+
+.quick-ship-info-box a {
+	font-weight: 400;
+}
+
+/* Spacing adjustment */
+.summit-product p {
+	margin-bottom: 1rem !important;
+}

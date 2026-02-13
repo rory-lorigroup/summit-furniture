@@ -1,0 +1,102 @@
+.summit-showrooms {
+	background: #f5f5f5;
+}
+
+.summit-showrooms-wrap {
+	width: 80%;
+	margin: 0 auto;
+	padding: 4rem 0;
+	max-width: 1024px;
+}
+
+.summit-showrooms-header {
+	border-bottom: 1px solid #818181;
+	margin-bottom: 3rem;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summit-showrooms-header h1 {
+	font-size: 2rem;
+	margin-bottom: .5rem;
+	font-weight: 100;
+	font-family: 'Roboto' !important;
+}
+
+.summit-single-showroom {
+	display: grid;
+	grid-template-columns: 60% 40%;
+	margin-bottom: 3rem;
+}
+
+.summit-single-showroom img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.summit-single-showroom .content {
+	display: grid;
+	align-content: end;
+	padding: 1.5rem 2rem;
+	background: white;
+}
+
+.summit-single-showroom .content h2 {
+	margin-bottom: 1rem;
+	font-size: 2.5rem;
+	font-weight: 100;
+	line-height: 1.1;
+}
+
+.summit-single-showroom .content h6 {
+	font-weight: 500;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+.summit-single-showroom .content h6 span {
+	font-weight: 300;
+	text-transform: none;
+}
+
+.summit-single-showroom .content p {
+	margin-top: 0;
+	font-weight: 100;
+}
+
+.summit-single-showroom a {
+	margin-top: .5rem;
+	color: black;
+	text-decoration: none;
+}
+
+.summit-single-showroom .virtual-tour {
+	font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+	.summit-single-showroom {
+		display: block;
+	}
+	
+	.summit-showrooms-wrap {
+		padding-top: 0;
+		width: 90%;
+	}
+	
+	.summit-showrooms-header h1 {
+		font-size: 1.75rem;
+	}
+	
+	.summit-single-showroom .content {
+		margin-top: -.5rem;
+		padding: 0 1.5rem 1.5rem;
+	}
+	
+	.summit-single-showroom .content h2 {
+		font-size: 2.5rem;
+		margin-top: 0rem;
+	}
+}

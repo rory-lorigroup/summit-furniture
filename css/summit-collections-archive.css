@@ -1,0 +1,95 @@
+.summit-collections {
+	background: #f5f5f5;
+}
+
+.summit-collections-wrap {
+	width: 80%;
+	margin: 0 auto;
+	padding: 4rem 0;
+	max-width: 1024px;
+}
+
+.summit-collections-header {
+	border-bottom: 1px solid #818181;
+	margin-bottom: 3rem;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summit-collections-header h1 {
+	font-size: 2rem;
+	margin-bottom: .5rem;
+	font-weight: 100;
+	font-family: 'Roboto' !important;
+}
+
+.summit-collections-header .addtoany_shortcode {
+	margin-bottom: -2rem;
+	height: 30px;
+	width: 30px;
+}
+
+.summit-single-collection {
+	display: flex;
+	margin-bottom: 3rem;
+}
+
+.summit-single-collection a.image-wrap {
+	flex: 0 0 650px;
+}
+
+.summit-single-collection img {
+	height: 100%;
+	object-fit: cover;
+	max-height: 450px;
+}
+
+.summit-single-collection .content {
+	flex: 0 0 375px;
+	display: grid;
+	align-content: end;
+	padding: 1rem 2rem;
+	background: white;
+}
+
+.summit-single-collection .content h2 {
+	margin-bottom: 1rem;
+	font-size: 2rem;
+	font-weight: 100;
+    text-transform: uppercase;
+	line-height: 1.1;
+}
+
+.summit-single-collection .content p {
+	margin-top: 0;
+	font-weight: 100;
+}
+
+.summit-single-collection a,
+.summit-single-collection a:visited,
+.summit-single-collection a:hover {
+	color: black !important;
+}
+
+@media only screen and (max-width: 768px) {
+	.summit-collections-wrap {
+		padding-top: 0;
+	}
+	
+	.summit-single-collection {
+		display: block;
+	}
+	
+	.summit-single-collection .content {
+		margin-top: -.5rem;
+	}
+	
+	.summit-single-collection .content h2 {
+		font-size: 2rem;
+	}
+	
+	.summit-single-collection img {
+		width: 100%;
+	}
+}

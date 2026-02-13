@@ -1,0 +1,66 @@
+.summit-types {
+	background: #f5f5f5;
+}
+
+.summit-types-wrap {
+	width: 80%;
+	margin: 0 auto;
+	padding: 4rem 0;
+}
+
+.summit-types-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 31%);
+	column-gap: 2.5rem;
+}
+
+.summit-types-grid .summit-single-type {
+	margin-bottom: 2.5rem;
+}
+
+.summit-single-type a {
+	display: block;
+	margin-bottom: -5px;
+}
+
+.summit-single-type img {
+	object-fit: cover;
+}
+
+.summit-single-type .content {
+	display: grid;
+	align-content: end;
+	padding: 1rem;
+	background: white;
+}
+
+.summit-single-type .content h2,
+.summit-single-type .content h2 a {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 300;
+    text-transform: uppercase;
+	line-height: 1.1;
+	text-decoration: none;
+	color: black;
+	font-family: 'Roboto' !important;
+}
+
+@media only screen and (max-width: 768px) {
+	.summit-types-wrap {
+		padding-top: 2.5rem;
+	}
+	
+	.summit-types-grid {
+		grid-template-columns: repeat(2, 48%);
+		column-gap: 4%;
+	}
+	
+	.summit-single-type {
+		display: block;
+	}
+	
+	.summit-single-type .content {
+		margin-top: -.5rem;
+	}
+}
