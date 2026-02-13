@@ -1,0 +1,28 @@
+name: Deploy Theme + Plugin to WP Engine (main)
+
+on:
+  push:
+    branches: [ "main" ]
+
+concurrency:
+  group: wpengine-deploy-main
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ---- Theme ----
+      - name: Deploy theme
+        uses: wpengine/github-action-wpe-site-deploy@v3
+        with:
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+          WPE_ENV: sfi
+          SRC_PATH: "."
+          REMOTE_PATH: "wp-content/themes/summit-furniture/"
+          FLAGS: -r --delete
+          CACHE_CLEAR: true
