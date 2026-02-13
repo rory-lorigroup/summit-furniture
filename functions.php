@@ -149,6 +149,7 @@ function summit_furniture_scripts() {
 	/* Single Product */
 	if ( is_product() ) {
 		wp_enqueue_style( 'summit-furniture-product-style', get_template_directory_uri() . '/css/summit-product.css' );
+		wp_enqueue_script( 'summit-furniture-video-poster', get_template_directory_uri() . '/js/summit-video-poster.js', array( 'jquery' ), _S_VERSION, true );
 	}
 	
 	/* Collections Archive */
