@@ -162,6 +162,9 @@ function summit_product_video_modal() {
 			align-items: center;
 			justify-content: center;
 		}
+		body.summit-video-modal-open {
+			overflow: hidden;
+		}
 		.summit-video-modal-overlay {
 			position: absolute;
 			top: 0;
@@ -190,11 +193,24 @@ function summit_product_video_modal() {
 			color: #fff;
 			font-size: 32px;
 			cursor: pointer;
-			padding: 0;
+			padding: 10px;
 			line-height: 1;
+			-webkit-tap-highlight-color: transparent;
 		}
-		.summit-video-modal-close:hover {
+		.summit-video-modal-close:hover,
+		.summit-video-modal-close:focus {
 			opacity: 0.7;
+		}
+		@media (max-width: 767px) {
+			.summit-video-modal-content {
+				width: 95%;
+			}
+			.summit-video-modal-close {
+				top: -45px;
+				right: -5px;
+				font-size: 40px;
+				padding: 15px;
+			}
 		}
 	</style>
 	<?php
