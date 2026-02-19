@@ -72,15 +72,15 @@ function summit_insert_video_poster_in_gallery( $gallery_image_ids ) {
 	// Remove poster from gallery if it already exists to avoid duplicates
 	$gallery_image_ids = array_values( array_diff( $gallery_image_ids, array( $poster_id ) ) );
 	
-	// Insert poster as first gallery item (appears second after featured image)
-	array_splice( $gallery_image_ids, 0, 0, $poster_id );
+	// Append poster as last gallery item
+	$gallery_image_ids[] = $poster_id;
 	
 	return $gallery_image_ids;
 }
 add_filter( 'woocommerce_product_get_gallery_image_ids', 'summit_insert_video_poster_in_gallery' );
 
 /**
- * Add video-tile class to second li in flex-control-nav if product has video and poster
+ * Add video-tile class to last li in flex-control-nav if product has video and poster
  */
 function summit_add_video_tile_class() {
 	if ( ! is_product() ) {
@@ -102,9 +102,9 @@ function summit_add_video_tile_class() {
 	?>
 	<script>
 	jQuery(document).ready(function($) {
-		setTimeout(function() {
-			$('.flex-control-nav li:nth-child(2)').addClass('video-tile');
-		}, 100);
+			setTimeout(function() {
+				$('.flex-control-nav li:last').addClass('video-tile');
+			}, 100);
 	});
 	</script>
 	<?php
