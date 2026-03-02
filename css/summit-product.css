@@ -59,6 +59,25 @@
 	position: relative;
 }
 
+.woocommerce-product-gallery {
+    overflow: hidden !important;
+}
+
+.woocommerce-product-gallery .flex-viewport {
+    overflow: hidden !important;
+}
+
+.woocommerce-product-gallery .flex-viewport::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background: white;
+    z-index: 10;
+}
+
 .woocommerce div.product div.images .summit-gallery-trigger {
 	right: 0;
 	bottom: 0;
