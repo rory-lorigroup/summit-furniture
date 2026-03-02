@@ -1,0 +1,70 @@
+.page-template-page-summit-links header,
+.page-template-page-summit-links footer,
+.page-template-page-summit-links .sf-signup-wrapper,
+.page-template-page-summit-links .summit-social {
+    display: none;
+}
+
+.page-template-page-summit-links,
+.page-template-page-summit-links .site-main {
+    background: #f7f3ee;
+}
+
+@media only screen and (min-width: 768px) {
+    .summit-social-card-long .kt-row-column-wrap {
+        aspect-ratio: 3/1;
+    }
+
+    .summit-social-card-long .kt-row-column-wrap .kt-inside-inner-col {
+        transition: background-size 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    }
+
+    .summit-social-card-long .kt-row-column-wrap:hover .kt-inside-inner-col {
+        background-size: 106%;
+        transition: background-size 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    }
+
+    .summit-social-card-cols .kt-row-column-wrap .wp-block-kadence-column {
+        aspect-ratio: 1 / 1.15;
+    }
+
+    .summit-social-card-cols .kt-row-column-wrap .kt-inside-inner-col {
+        transition: background-size 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    }
+
+    .summit-social-card-cols .kt-row-column-wrap .wp-block-kadence-column:hover .kt-inside-inner-col {
+        background-size: auto 106%;
+        transition: background-size 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .summit-social-card-long .kt-row-column-wrap .wp-block-kadence-column,
+    .summit-social-card-cols .kt-row-column-wrap .wp-block-kadence-column {
+        aspect-ratio: 1.5/1;
+    }
+
+    .summit-social-card-long .kt-row-column-wrap .kt-inside-inner-col,
+    .summit-social-card-cols .kt-row-column-wrap .kt-inside-inner-col {
+        height: 100% !important;
+        background-size: cover;
+    }
+}
+
+.summit-social-icons-list {
+    width: fit-content !important;
+}
+
+.summit-social-icons-list .kt-svg-icon-list-single {
+    border: 1px solid #E8DFD3;
+    border-radius: 100%;
+    padding: 10px !important;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.summit-social-icons-list .kt-svg-icon-link:hover .kt-svg-icon-list-single {
+    background: #9c7b4f;
+    border-color: #9c7b4f;
+    color: #fff;
+    transition: background 0.3s ease, color 0.3s ease;
+}

@@ -118,6 +118,7 @@ add_action( 'after_setup_theme', 'summit_furniture_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function summit_furniture_scripts() {
+	
 	wp_enqueue_style( 'summit-furniture-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'summit-furniture-style', 'rtl', 'replace' );
 
@@ -221,6 +222,12 @@ function summit_furniture_scripts() {
 	
 	wp_enqueue_script( 'summit-furniture-registration-js', get_template_directory_uri() . '/js/summit-registration.js', array(), _S_VERSION, true );
 	
+
+	/* Summit Links Page specific CSS */
+	if ( is_page_template( 'page-summit-links.php' ) ) {
+		wp_enqueue_style( 'summit-furniture-links', get_template_directory_uri() . '/css/page-summit-links.css', array(), _S_VERSION );
+	}
+
 	/* Summit Hotfixes (loads last, like Customizer CSS) */
 	wp_enqueue_style( 'summit-furniture-hotfixes', get_template_directory_uri() . '/css/summit-hotfixes.css', array(), _S_VERSION );
 }
