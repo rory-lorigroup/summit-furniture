@@ -1,0 +1,765 @@
+.force-roboto,
+.force-roboto * {
+	font-family: 'Roboto' !important;
+}
+
+button.button,
+.product-remove button,
+.summit-btn,
+a.button,
+a.summit-account-btn {
+	transition: all .3s ease-in-out;
+}
+
+body:not(.home) a.button:hover,
+body:not(.home) a.summit-account-btn:hover {
+	transition: all .3s ease-in-out;
+	background: white !important;
+	color: black !important;
+}
+
+body:not(.home) button.button:hover,
+.product-remove button:hover,
+.summit-btn:hover,
+.summit-folder-actions a.summit-account-btn:hover {
+	background: black !important;
+	color: white !important;
+	cursor: pointer;
+}
+
+.gt_selector:hover,
+.summit-search:hover {
+	cursor: pointer;
+}
+
+.black-btn {
+	border-width: .5px !important;
+}
+
+body:not(.home) a.black-btn:hover {
+	background: black !important;
+	color: white !important;
+}
+
+body.home a.button:not(.not-gray):hover {
+	color: #D9DADD !important;
+	border-color: #D9DADD !important;
+}
+
+.fadeout {
+  animation: fadeOut 1s linear 5.25s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+#menu-item-4200 {
+	margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+	h2.image-overlay-title {
+		font-size: 36px !important;
+	}
+	
+	p {
+		font-weight: 300 !important;
+	}
+}
+
+.single-stories header {
+	border-bottom: .5px solid black;
+}
+
+.single-stories main {
+	width: 80%;
+	margin: 4rem auto 0;
+}
+
+.main-navigation.toggled .summit-menu ul li a:hover {
+	text-decoration: underline;
+}
+
+/* Launch hotfixes */
+#shipping_country_field .select2:first-of-type {
+	display: none;
+}
+
+.woocommerce-product-gallery__image,
+.woocommerce-product-gallery__image a,
+.single-finish a {
+	pointer-events: none !important;
+}
+
+@media only screen and (max-width: 580px) {
+	.story-gallery {
+		display: none !important;
+	}
+}
+
+.vimeo-video-block {
+	position: absolute;
+  top: 0;
+  left: 0;
+	width: 100%;
+	overflow: hidden;
+	height: 600px;
+	z-index: -1;
+}
+
+.vimeo-video-block iframe {
+	width: 100vw !important;
+  max-width: calc(1280px + 20rem);
+  position: absolute;
+  left: -2rem;
+  top: -10rem;
+}	
+
+.site-header,
+.site-header ~ div,
+.site-header ~ main {
+	margin: 0 auto;
+}
+
+@media only screen and (min-width: 1680px) {
+	.vimeo-video-block iframe {
+		left: -5rem;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+  .splide__slide {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .splide__slide:nth-of-type(1) .kb-bg-slide,
+  .splide__slide:nth-of-type(2) .kb-bg-slide {
+    background-size: 135%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: zoomImage 12s linear infinite;
+  }
+
+  .splide__slide:nth-of-type(3) .kb-bg-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: panImage 6.05s linear infinite;
+  }
+
+  @keyframes panImage {
+    0%   { background-position: center top; }
+    100% { background-position: center bottom; }
+  }
+
+  @keyframes zoomImage {
+    0%   { background-size: 135%; }
+    98%  { background-size: 100%; }
+    100% { background-size: 100%; }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+	.locations-grid .kt-has-5-columns {
+		grid-template-columns: repeat(5, calc(20% - 1rem)) !important;
+  	gap: 1rem !important;
+	}
+}
+
+.locations-grid .kt-inside-inner-col p a:last-of-type {
+	text-decoration: underline;
+}
+
+.row-full-width {
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
+}
+
+@media only screen and (max-width: 1344px) {
+	.row-full-width .kt-inside-inner-col {
+		padding-left: 3.25vw;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.almost-full-width .wp-block-kadence-column {
+		aspect-ratio: 1/1;
+	}
+}
+
+.product-login {
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+	.summit-login-modal {
+		width: 95vw;
+  	left: 2.5vw;
+	}
+	
+	.summit-login-modal > *,
+	.summit-login-modal form {
+		width: 80% !important;
+  	margin: 0 auto;
+	}
+	
+	.wp-block-list {
+		padding-left: 0;
+		margin-left: 1rem;
+	}
+}
+
+/* Cookie Banner */
+#hu {
+	width: 60vw !important;
+  left: 20vw !important;
+  transform: none !important;
+	background: #333a47 !important;
+	min-width: unset !important;
+	top: 25% !important;
+	padding: .5rem .5rem 1rem !important;
+}
+
+#hu.hu-expanded {
+	top: 3% !important;
+}
+
+#hu #hu-outer-wrapper {
+	background: #333a47 !important;
+	box-shadow: none !important;
+}
+
+#hu.hide-consent {
+	display: none !important;
+}
+
+.hu-heading,
+.hu-text-body {
+	text-align: left !important;
+}
+
+#hu-cookies-notice-about,
+.hu-toggle-switch {
+	display: none !important;
+}
+
+#hu-cookies-notice-consent {
+	justify-content: start !important;
+	width: 400px !important;
+}
+
+#hu-cookies-notice-consent-choices {
+	flex: 0 0 100% !important;
+  justify-content: start;
+	margin-top: 2rem !important;
+}
+
+.hu-toggle-heading {
+	background: transparent !important;
+  color: white !important;
+  border-radius: 0 !important;
+  box-shadow: none !imporant;
+	border: 1px solid white !important;
+}
+
+.hu-active + .hu-toggle-heading {
+	outline: 1px solid white !important;
+}
+
+.hu-toggle-heading .hu-toggle-label {
+	font-weight: 300 !important;
+}
+
+#hu-cookies-footer {
+	position: absolute !important;
+  bottom: calc(var(--hu-spacingSize)*.3) !important;
+  padding: 0 !important;
+  width: calc(100% - 450px) !important;
+  right: 20px;
+}
+
+#hu.hu-expanded #hu-cookies-footer {
+	top: calc(2rem + 15px);
+  height: fit-content;
+}
+
+#hu .hu-footer-actions {
+	justify-content: left !important;
+}
+
+#hu-cookies-save {
+	background: white !important;
+  color: #333a47 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+	border: 1px solid white !important;
+	padding: calc(var(--hu-spacingSize)*.25) !important;
+	min-width: 75px !important;
+	text-transform: uppercase !important;
+}
+
+.hu-footer-links {
+	width: 66% !important;
+  justify-content: center !important;
+  right: 0 !important;
+  column-gap: 8px !important;
+	bottom: .325rem !important;
+}
+
+#hu #hu-cookies-preferences .hu-checkbox-toggle .hu-toggle-label {
+	padding: 8px !important;
+}
+
+input[name="hu-cookies-preferences-categories"]:checked + .hu-toggle-label {
+	outline: 1px solid white !important;
+} 
+
+@media only screen and (max-width: 1280px) {
+	#hu {
+		width: 70vw !important;
+		left: 15vw !important;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	#hu {
+		width: 80vw !important;
+		left: 10vw !important;
+		min-width: 80vw !important;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	#hu {
+		width: 100vw !important;
+		left: 0 !important;
+		max-width: unset !important;
+		bottom: 0 !important;
+		top: unset !important;
+		min-width: 100vw !important;
+	}
+	
+	#hu-cookies-notice-consent {
+		width: 100% !important;
+	}
+	
+	#hu-cookies-notice-consent-choices {
+		display: grid !important;
+  	justify-content: center !important;
+	}
+	
+	#hu-cookies-footer {
+		position: relative !important;
+		width: 100vw !important;
+		display: grid !important;
+		left: -30px !important;
+	}
+	
+	.hu-footer-content {
+		flex-direction: column !important;
+		width: 100% !important;
+	}
+	
+	#hu-cookies-save {
+		min-width: 180px !important;
+		margin-top: .1rem !important;
+	}
+	
+	#hu .hu-footer-actions {
+		justify-content: center !important;
+    margin-top: .5rem !important;
+	}
+	
+	.hu-footer-links {
+		position: relative !important;
+  	flex-direction: row;
+		width: 100% !important;
+    margin: 1rem auto !important;
+	}
+}
+
+.summit-modal.social .sf-signup-wrapper {
+	margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+	z-index: 100000;
+}
+
+@media only screen and (max-width: 810px) {
+	.summit-modal.social {
+		top: 15% !important;
+	}
+}
+
+#app-success {
+	display: none;
+}
+
+.single-fabric img {
+	aspect-ratio: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+	.partial-cover {
+		height: 80vh;
+	}
+}
+
+.single-fabric a p {
+	margin: 0;
+}
+
+@media only screen and (max-width: 810px) {
+	.summit-tabs-wrap {
+		flex-wrap: wrap;
+		column-gap: 24px;
+	}
+	
+	.single-finish img {
+		height: 80px;
+	}
+}
+
+.single-product p,
+.single-product li,
+.single-product a.care-download,
+.summit-collection-info p,
+.summit-single-collection p,
+p.sf-signup-message,
+.afrfb-form-register p.form-row label,
+.single article p:not(.light-font),
+.showrooms-intro p,
+.summit-single-showroom .content p,
+.quick-ship-intro p,
+.single-stories p {
+	font-weight: 300 !important;
+}
+
+.single-product a.care-download,
+.summit-collection-info .collection-tearsheet {
+	text-decoration: underline;
+}
+
+/* New Homepage */
+.side-by-side figure, 
+.side-by-side figure > *:not(figcaption) {
+	height: 100% !important;
+	position: relative;
+}
+
+.side-by-side figcaption {
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	margin-top: 0;
+}
+
+.summit-founding-tile p:last-of-type {
+	position: absolute;
+	bottom: 1rem;
+	width: 100%;
+  left: 0;
+}
+
+@media only screen and (max-width: 810px) {
+	.home .site-branding {
+		padding: 20px;
+	  position: absolute;
+		margin-top: 60px;
+	}
+	
+	body:not(.home) .site-header {
+    padding: 0;
+    align-content: center;
+	}
+	
+	body:not(.home) .site-branding {
+		width: 100%;
+		padding: 20px;
+	}
+	
+	.site-branding::before,
+	.site-branding::after {
+		height: 1px !important;
+	}
+	
+	#hu-revoke {
+		display: none !important;
+	}
+	
+	.home .kb-row-layout-wrap:not(.side-by-side),
+	.home .kt-inside-inner-col {
+		aspect-ratio: 1/1;
+		min-height: unset !important;
+	}
+	
+	.home .kb-row-layout-wrap p {
+		margin-bottom: 0 !important;
+	}
+}
+
+.post-type-archive-stories h1 {
+	font-family: 'Chronicle' !important;
+	text-transform: none !important;
+}
+
+.dimensions .dropdown-content ul {
+	margin-bottom: 0;
+}
+
+h1 sup,
+h2 sup,
+h3 sup,
+h4 sup,
+h5 sup,
+h6 sup {
+  font-size: 0.4em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.product-main-description p {
+  margin-bottom: 1rem;
+}
+
+.small-reg-sb {
+  position: relative;
+}
+
+.small-reg-sb::after {
+  content: '®';
+  font-size: 30%;
+  position: absolute;
+  top: 0.2em;
+  margin-left: 0.05em;
+}
+
+@media only screen and (max-width: 580px) {
+	.site-branding {
+		margin-top: 50px;
+	}
+}
+
+/* Summit Fabrics page: Download link under title */
+.summit-fabrics-download {
+  margin: 0 0 1.5rem 0;
+}
+
+.summit-fabrics-download a {
+  display: inline-block;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: inherit;
+}
+
+.summit-fabrics-download a:hover {
+  opacity: 0.8;
+}
+
+/* GFORMS */
+.gform_wrapper {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.gform_wrapper input,
+.gform_wrapper input:focus,
+.gform_wrapper input:active {
+	border-top: none !important;
+	border-left: none !important;
+	border-right: none !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+	background: white !important;
+	margin: 0 !important;
+}
+
+.gform-footer input.gform_button {
+	background: #333a47 !important;
+	font-weight: 300 !important;
+	font-size: 1rem !important;
+}
+
+.gsection_title {
+	font-size: 1.75rem;
+	margin-bottom: 0;
+}
+
+.select2-container .select2-selection--single {
+	height: auto !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	top: calc(50% - 13px) !important;
+}
+
+@media only screen and (max-width: 1024px) {
+	.gform_wrapper {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.slick-track {
+	margin-left: 0 !important;
+}
+
+#hu-revoke {
+	display: none !important;
+}
+
+.summit-promo-banner {
+    background-color: #f5f5f5;
+    padding: 25px;
+    margin: 25px 0;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.summit-promo-banner .promo-image {
+    flex: 0 0 200px;
+}
+.summit-promo-banner .promo-image img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+.summit-promo-banner .promo-content {
+    flex: 1;
+}
+.summit-promo-banner .promo-headline {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+.summit-promo-banner .promo-subhead {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.summit-promo-banner .promo-fine-print {
+    font-size: 14px;
+    color: inherit;
+    font-style: italic;
+}
+
+
+
+.summit-collection-info + .summit-promo-banner {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+hr.promo-divider {
+    border: none;
+    border-top: 1px solid #e2ddd5;
+    margin: 40px 0;
+}
+
+
+
+body.page-id-6795 h1.entry-title { display: none; }
+
+
+
+/* ===== Sustainability Film (page-id-6795): remove everything except the video ===== */
+
+body.page-id-6795 header#masthead,
+body.page-id-6795 #masthead,
+body.page-id-6795 .site-header,
+body.page-id-6795 #site-navigation,
+body.page-id-6795 .main-navigation,
+body.page-id-6795 .summit-search-form,
+body.page-id-6795 .summit-professionals-login,
+body.page-id-6795 .summit-retail-login {
+  display: none !important;
+}
+
+body.page-id-6795 .sf-signup-wrapper,
+body.page-id-6795 #sf-email-signup-form {
+  display: none !important;
+}
+
+body.page-id-6795 .summit-social {
+  display: none !important;
+}
+
+body.page-id-6795 footer#colophon,
+body.page-id-6795 .summit-footer,
+body.page-id-6795 #colophon {
+  display: none !important;
+}
+
+body.page-id-6795 .summit-modal,
+body.page-id-6795 .summit-modal.open-modal,
+body.page-id-6795 .summit-login-modal {
+  display: none !important;
+}
+
+/* Optional: hide cookie notice on this page only (remove this section if you need it) */
+body.page-id-6795 #hu,
+body.page-id-6795 #hu-cookies-notice,
+body.page-id-6795 .hu-cookie,
+body.page-id-6795 .hu-wrapper {
+  display: none !important;
+}
+
+/* Remove leftover spacing */
+body.page-id-6795 .site,
+body.page-id-6795 #page,
+body.page-id-6795 .site-main,
+body.page-id-6795 #primary,
+body.page-id-6795 .entry-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ===== Sustainability Film: full-frame (no cropping) with black bars ===== */
+
+body.page-id-6795,
+body.page-id-6795 #page,
+body.page-id-6795 #primary,
+body.page-id-6795 .site-main,
+body.page-id-6795 .entry-content {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  background: #000 !important;
+  overflow: hidden !important;
+}
+
+body.page-id-6795 .wp-block-video {
+  height: 100vh !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body.page-id-6795 .wp-block-video video {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  object-fit: contain !important;
+  background: #000 !important;
+  display: block !important;
+}

@@ -221,6 +221,8 @@ function summit_furniture_scripts() {
 	
 	wp_enqueue_script( 'summit-furniture-registration-js', get_template_directory_uri() . '/js/summit-registration.js', array(), _S_VERSION, true );
 	
+	/* Summit Hotfixes (loads last, like Customizer CSS) */
+	wp_enqueue_style( 'summit-furniture-hotfixes', get_template_directory_uri() . '/css/summit-hotfixes.css', array(), _S_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'summit_furniture_scripts' );
 
