@@ -89,6 +89,38 @@ if ( $is_cover_gallery === true ) {
 		?>
 	</div>
 
+	
+	
+<?php
+	$enable_promo = get_field( 'enable_promo', 'product-collection_' . $term_id );
+	if ( $enable_promo ) :
+		$promo_image     = get_field( 'promo_image', 'product-collection_' . $term_id );
+		$promo_headline  = get_field( 'promo_headline', 'product-collection_' . $term_id );
+		$promo_subhead   = get_field( 'promo_subhead', 'product-collection_' . $term_id );
+		$promo_fine_print = get_field( 'promo_fine_print', 'product-collection_' . $term_id );
+	?>
+		<div class="summit-promo-banner">
+			<?php if ( $promo_image ) : ?>
+				<div class="promo-image">
+					<img src="<?php echo esc_url( $promo_image ); ?>" alt="<?php echo esc_attr( $promo_headline ); ?>" />
+				</div>
+			<?php endif; ?>
+			<div class="promo-content">
+				<?php if ( $promo_headline ) : ?>
+					<h3 class="promo-headline"><?php echo esc_html( $promo_headline ); ?></h3>
+				<?php endif; ?>
+				<?php if ( $promo_subhead ) : ?>
+					<p class="promo-subhead"><?php echo esc_html( $promo_subhead ); ?></p>
+				<?php endif; ?>
+				<?php if ( $promo_fine_print ) : ?>
+					<p class="promo-fine-print"><?php echo esc_html( $promo_fine_print ); ?></p>
+				<?php endif; ?>
+			</div>
+		</div>
+	<?php endif; ?>	
+	<hr class="promo-divider" />
+	
+	
 	<?php
 	$args  = array(
 		'post_type'      => 'product',

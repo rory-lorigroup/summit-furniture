@@ -221,6 +221,9 @@ function summit_furniture_scripts() {
 	wp_enqueue_script( 'summit-furniture-jquery-validate', get_template_directory_uri() . '/js/jquery.validate.js', array(), _S_VERSION, true );
 	
 	wp_enqueue_script( 'summit-furniture-registration-js', get_template_directory_uri() . '/js/summit-registration.js', array(), _S_VERSION, true );
+
+	/* AI Images: prevent context menu/drag on certain images */
+	wp_enqueue_script( 'summit-furniture-ai-images', get_template_directory_uri() . '/js/summit-ai-images.js', array(), _S_VERSION, true );
 	
 
 	/* Summit Links Page specific CSS */

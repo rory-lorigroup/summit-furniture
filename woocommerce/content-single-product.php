@@ -133,6 +133,38 @@ if ( post_password_required() ) {
 				<?php endif; ?>
 			<?php endif; ?>
 
+			
+<?php // Promo Banner ?>
+			<?php
+			$enable_promo = get_field( 'enable_promo', $post_ID );
+			if ( $enable_promo ) :
+				$promo_image     = get_field( 'promo_image', $post_ID );
+				$promo_headline  = get_field( 'promo_headline', $post_ID );
+				$promo_subhead   = get_field( 'promo_subhead', $post_ID );
+				$promo_fine_print = get_field( 'promo_fine_print', $post_ID );
+			?>
+				<div class="summit-promo-banner">
+					<?php if ( $promo_image ) : ?>
+						<div class="promo-image">
+							<img src="<?php echo esc_url( $promo_image ); ?>" alt="<?php echo esc_attr( $promo_headline ); ?>" />
+						</div>
+					<?php endif; ?>
+					<div class="promo-content">
+						<?php if ( $promo_headline ) : ?>
+							<h3 class="promo-headline"><?php echo esc_html( $promo_headline ); ?></h3>
+						<?php endif; ?>
+						<?php if ( $promo_subhead ) : ?>
+							<p class="promo-subhead"><?php echo esc_html( $promo_subhead ); ?></p>
+						<?php endif; ?>
+						<?php if ( $promo_fine_print ) : ?>
+							<p class="promo-fine-print"><?php echo esc_html( $promo_fine_print ); ?></p>
+						<?php endif; ?>
+					</div>
+				</div>
+			<?php endif; ?>
+						
+			
+			
 		</div><!-- /.summit-product -->
 
 		<?php // Short Collection Description ?>
