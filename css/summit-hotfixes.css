@@ -647,6 +647,7 @@ h6 sup {
 .summit-promo-banner .promo-headline {
     display: flex;
     align-content: center;
+	flex-wrap: wrap;
 	gap: .25rem
 }
 .summit-promo-banner .promo-headline > * {
