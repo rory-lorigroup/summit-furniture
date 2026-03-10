@@ -653,6 +653,9 @@ h6 sup {
 	margin: 0;
 	font-size: 1rem;
 }
+.summit-promo-banner .promo-headline > p {
+	font-size: 14px;
+}
 .summit-promo-banner .promo-subhead {
     font-size: 14px;
     margin-bottom: 8px;
