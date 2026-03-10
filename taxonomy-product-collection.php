@@ -107,13 +107,13 @@ if ( $is_cover_gallery === true ) {
 			<?php endif; ?>
 			<div class="promo-content">
 				<?php if ( $promo_headline ) : ?>
-					<h3 class="promo-headline"><?php echo esc_html( $promo_headline ); ?></h3>
+					<div class="promo-headline"><?php echo wp_kses_post( $promo_headline ); ?></div>
 				<?php endif; ?>
 				<?php if ( $promo_subhead ) : ?>
-					<p class="promo-subhead"><?php echo esc_html( $promo_subhead ); ?></p>
+					<div class="promo-subhead"><?php echo wp_kses_post( $promo_subhead ); ?></div>
 				<?php endif; ?>
 				<?php if ( $promo_fine_print ) : ?>
-					<p class="promo-fine-print"><?php echo esc_html( $promo_fine_print ); ?></p>
+					<div class="promo-fine-print"><?php echo wp_kses_post( $promo_fine_print ); ?></div>
 				<?php endif; ?>
 			</div>
 		</div>
