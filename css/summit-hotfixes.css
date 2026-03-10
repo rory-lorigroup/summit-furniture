@@ -669,14 +669,16 @@ h6 sup {
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
-
 hr.promo-divider {
     border: none;
     border-top: 1px solid #e2ddd5;
     margin: 40px 0;
 }
-
+@media only screen and (max-with: 768px) {
+	.summit-promo-banner {
+		display: block;
+	}
+}
 
 
 body.page-id-6795 h1.entry-title { display: none; }
