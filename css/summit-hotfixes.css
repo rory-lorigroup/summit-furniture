@@ -674,7 +674,7 @@ hr.promo-divider {
     border-top: 1px solid #e2ddd5;
     margin: 40px 0;
 }
-@media only screen and (max-with: 768px) {
+@media only screen and (max-width: 768px) {
 	.summit-promo-banner {
 		display: block;
 	}
