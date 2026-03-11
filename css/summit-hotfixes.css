@@ -645,17 +645,12 @@ h6 sup {
     flex: 1;
 }
 .summit-promo-banner .promo-headline {
-    display: flex;
-    align-content: center;
-	flex-wrap: wrap;
-	gap: .25rem
+    display: block;
 }
 .summit-promo-banner .promo-headline > * {
 	margin: 0;
 	font-size: 1rem;
-}
-.summit-promo-banner .promo-headline > p {
-	font-size: 14px;
+	display: inline;
 }
 .summit-promo-banner .promo-subhead {
     font-size: 14px;
@@ -674,7 +669,7 @@ hr.promo-divider {
     border-top: 1px solid #e2ddd5;
     margin: 40px 0;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-with: 768px) {
 	.summit-promo-banner {
 		display: block;
 	}
