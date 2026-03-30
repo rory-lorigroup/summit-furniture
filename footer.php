@@ -68,21 +68,23 @@
 } ?>
 
 <?php if (!is_user_logged_in()) {
-	?>
-	<div class="summit-login-modal retail">
-		<?php wp_login_form(); ?>
-		<a class="summit-btn" href="/retail-account">Create an Account</a>
-	</div>
-	<div class="summit-login-modal trade">
-		<h2>
-			<?php echo esc_html('Log In or Create an Account to Download') ?>
-		</h2>
-		<?php wp_login_form(); ?>
-		<a class="summit-btn" href="/trade-account">Create an Account</a>
-	</div>
-	<div class="summit-modal social">
-		<?php echo do_shortcode('[sfms_signup_form]'); ?>
-	</div>
+       ?>
+       <div class="summit-login-modal retail">
+	       <?php wp_login_form(); ?>
+	       <a class="summit-btn" href="/retail-account">Create an Account</a>
+       </div>
+       <div class="summit-login-modal trade">
+	       <h2>
+		       <?php echo esc_html('Log In or Create an Account to Download') ?>
+	       </h2>
+	       <?php wp_login_form(); ?>
+	       <a class="summit-btn" href="/trade-account">Create an Account</a>
+       </div>
+       <?php if ( !is_page_template('page-summit-links.php') ) : ?>
+       <div class="summit-modal social">
+	       <?php echo do_shortcode('[sfms_signup_form]'); ?>
+       </div>
+       <?php endif; ?>
 <?php
 } ?>
 <script type="text/javascript">
