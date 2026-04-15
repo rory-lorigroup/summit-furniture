@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Types Archive
+ * Template Name: Product Category Archive
  *
  * @package Summit_Furniture
  */
