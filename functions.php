@@ -178,15 +178,15 @@ function summit_furniture_scripts() {
 		wp_enqueue_style( 'summit-furniture-single-designer', get_template_directory_uri() . '/css/summit-single-designer.css' );
 	}
 	
-	/* Types Archive */
-	if ( is_page_template( 'page-types-archive.php' ) ) {
-		wp_enqueue_style( 'summit-furniture-types-archive', get_template_directory_uri() . '/css/summit-types-archive.css' );
+	/* Product Categories Archive */
+	if ( is_page_template( 'page-product-categories-archive.php' ) ) {
+		wp_enqueue_style( 'summit-furniture-product-categories-archive', get_template_directory_uri() . '/css/summit-product-categories-archive.css' );
 	}
 	
-	/* Single Type */
-	if ( is_tax('type') ) {
-		wp_enqueue_style( 'summit-furniture-single-type', get_template_directory_uri() . '/css/summit-single-type.css' );
-		wp_enqueue_script( 'summit-furniture-type-filter', get_template_directory_uri() . '/js/summit-types-filter.js', array(), _S_VERSION, true );
+	/* Single Product Category */
+	if ( is_tax('product_cat') ) {
+		wp_enqueue_style( 'summit-furniture-single-product-category', get_template_directory_uri() . '/css/summit-single-product-category.css' );
+		wp_enqueue_script( 'summit-furniture-product-category-filter', get_template_directory_uri() . '/js/summit-product-category-filter.js', array(), _S_VERSION, true );
 	}
 	
 	/* Showrooms */

@@ -33,7 +33,7 @@
 		<div class="summit-footer-menus">
 			<ul>
 				<li><a href="/collections">Collections</a></li>
-				<li><a href="/types">Types</a></li>
+				<li><a href="/categories">Categories</a></li>
 			</ul>
 			<ul>
 				<li><a href="/sales">Sales</a></li>

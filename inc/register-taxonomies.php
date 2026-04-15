@@ -44,19 +44,6 @@ function summit_get_taxonomy_labels( $singular, $plural ) {
  * Register custom product taxonomies.
  */
 function summit_register_product_taxonomies() {
-	// Type taxonomy.
-	register_taxonomy(
-		'type',
-		array( 'product' ),
-		array(
-			'hierarchical'      => true,
-			'labels'            => summit_get_taxonomy_labels( 'Type', 'Types' ),
-			'show_ui'           => true,
-			'show_in_nav_menus' => true,
-			'query_var'         => true,
-		)
-	);
-
 	// Collection taxonomy.
 	register_taxonomy(
 		'product-collection',

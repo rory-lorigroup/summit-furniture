@@ -31,64 +31,11 @@ get_header();
 				<span class="summit-endurance-tab">Summit Endurance Fabrics</span>
 			</div>
 			<div class="summit-fabric-tab">
-				<span class="nina-campbell-tab">Nina Campbell Collection</span>
-			</div>
-			<div class="summit-fabric-tab">
 				<span class="ultra-collection-tab">Ultra Collection</span>
 			</div>
 		</div>
 
-		<!-- Nina Campbell -->
-		<div class="summit-fabric-content summit-nina-campbell-fabrics">
-			<?php
-			if ( $terms && ! is_wp_error( $terms ) ) :
-				foreach ( $terms as $term ) :
-					$termID   = $term->term_id;
-					$termName = $term->name;
 
-					$ncargs = array(
-						'post_type'      => 'product',
-						'post_status'    => 'publish',
-						'posts_per_page' => 25,
-						'tax_query'      => array(
-							array(
-								'taxonomy' => 'product-fabric-collection',
-								'field'    => 'term_id',
-								'terms'    => $termID,
-							),
-						),
-						'meta_query'     => array(
-							array(
-								'key'   => 'nc_collection',
-								'value' => '1',
-								'type'  => 'NUMERIC',
-							),
-						),
-					);
-					$ncquery = new WP_Query( $ncargs );
-					if ( $ncquery->have_posts() ) : ?>
-						<div class="fabric-family"><?php echo esc_html( $termName ); ?></div>
-						<div class="fabric-group">
-							<?php
-							while ( $ncquery->have_posts() ) :
-								$ncquery->the_post();
-								$title = get_the_title();
-								?>
-								<div class="single-fabric">
-									<a href="<?php echo esc_url( get_the_permalink() ); ?>">
-										<img src="<?php echo esc_url( get_the_post_thumbnail_url() ); ?>" alt="Image of <?php echo esc_attr( $termName . ' ' . $title ); ?>" height="200" width="200" />
-										<p><?php echo esc_html( $title ); ?></p>
-									</a>
-								</div>
-							<?php endwhile; ?>
-						</div>
-					<?php
-					endif;
-					wp_reset_postdata();
-				endforeach;
-			endif;
-			?>
-		</div>
 
 		<!-- Ultra Collection -->
 		<div class="summit-fabric-content summit-ultra-collection-fabrics">
@@ -162,21 +109,6 @@ get_header();
 							),
 						),
 						'meta_query'     => array(
-							'relation' => 'AND',
-							// Not Nina: either meta not set OR value != 1
-							array(
-								'relation' => 'OR',
-								array(
-									'key'     => 'nc_collection',
-									'compare' => 'NOT EXISTS',
-								),
-								array(
-									'key'     => 'nc_collection',
-									'value'   => '1',
-									'compare' => '!=',
-									'type'    => 'NUMERIC',
-								),
-							),
 							// Not Ultra: either meta not set OR value != 1
 							array(
 								'relation' => 'OR',
@@ -186,6 +118,11 @@ get_header();
 								),
 								array(
 									'key'     => 'ultra_collection',
+									'value'   => '1',
+									'compare' => '!=',
+									'type'    => 'NUMERIC',
+								),
+							),
 									'value'   => '1',
 									'compare' => '!=',
 									'type'    => 'NUMERIC',

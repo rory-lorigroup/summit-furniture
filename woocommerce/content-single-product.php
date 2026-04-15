@@ -303,9 +303,6 @@ if ( post_password_required() ) {
 								<span class="summit-endurance-tab">Summit Endurance Fabrics</span>
 							</div>
 							<div class="summit-fabric-tab">
-								<span class="nina-campbell-tab">Nina Campbell Collection</span>
-							</div>
-							<div class="summit-fabric-tab">
 								<span class="ultra-collection-tab">Ultra Collection</span>
 							</div>
 							<div class="summit-fabric-tab">
@@ -313,54 +310,7 @@ if ( post_password_required() ) {
 							</div>
 						</div>
 
-						<?php // Nina Campbell Fabrics ?>
-						<div class="summit-fabric-content summit-nina-campbell-fabrics">
-							<?php
-							if ( $fabric_terms && ! is_wp_error( $fabric_terms ) ) :
-								foreach ( $fabric_terms as $term ) :
-									$termID   = $term->term_id;
-									$termName = $term->name;
 
-									$ncargs = array(
-										'post_type'      => 'product',
-										'post_status'    => 'publish',
-										'posts_per_page' => 25,
-										'tax_query'      => array(
-											array(
-												'taxonomy' => 'product-fabric-collection',
-												'field'    => 'term_id',
-												'terms'    => $termID,
-											),
-										),
-										'meta_query'     => array(
-											array(
-												'key'   => 'nc_collection',
-												'value' => '1',
-												'type'  => 'NUMERIC',
-											),
-										),
-									);
-									$ncquery = new WP_Query( $ncargs );
-									if ( $ncquery->have_posts() ) :
-							?>
-									<div class="fabric-family"><?php echo esc_html( $termName ); ?></div>
-									<div class="fabric-group">
-										<?php while ( $ncquery->have_posts() ) : $ncquery->the_post(); ?>
-											<div class="single-fabric">
-												<a href="<?php the_permalink(); ?>">
-													<?php the_post_thumbnail( 'thumbnail' ); ?>
-													<p><?php the_title(); ?></p>
-												</a>
-											</div>
-										<?php endwhile; ?>
-									</div>
-							<?php
-									endif;
-									wp_reset_postdata();
-								endforeach;
-							endif;
-							?>
-						</div>
 
 						<?php // Ultra Collection Fabrics ?>
 						<div class="summit-fabric-content summit-ultra-collection-fabrics" style="display: none">
@@ -431,28 +381,19 @@ if ( post_password_required() ) {
 											),
 										),
 										'meta_query'     => array(
-											'relation' => 'AND',
 											array(
 												'relation' => 'OR',
 												array(
-													'key'     => 'nc_collection',
+													'key'     => 'ultra_collection',
 													'compare' => 'NOT EXISTS',
 												),
 												array(
-													'key'     => 'nc_collection',
+													'key'     => 'ultra_collection',
 													'value'   => '0',
 													'compare' => '=',
 													'type'    => 'NUMERIC',
 												),
 											),
-											array(
-												'relation' => 'OR',
-												array(
-													'key'     => 'ultra_collection',
-													'compare' => 'NOT EXISTS',
-												),
-												array(
-													'key'     => 'ultra_collection',
 													'value'   => '0',
 													'compare' => '=',
 													'type'    => 'NUMERIC',

@@ -38,30 +38,20 @@
 	
 	
 	$('.summit-endurance-tab').on('click', function() {
-		$('.summit-nina-campbell-fabrics').css('display', 'none');
 		$('.summit-finishes').css('display', 'none');
 		$('.summit-ultra-collection-fabrics').css('display', 'none');
 		$('.summit-endurance-fabrics').css('display', 'block');
 	});
 	
-	$('.nina-campbell-tab').on('click', function() {
-		$('.summit-endurance-fabrics').css('display', 'none');
-		$('.summit-ultra-collection-fabrics').css('display', 'none');
-		$('.summit-finishes').css('display', 'none');		
-		$('.summit-nina-campbell-fabrics').css('display', 'block');
-	});
-	
 	$('.ultra-collection-tab').on('click', function() {
 		$('.summit-endurance-fabrics').css('display', 'none');
-		$('.summit-finishes').css('display', 'none');		
-		$('.summit-nina-campbell-fabrics').css('display', 'none');
+		$('.summit-finishes').css('display', 'none');
 		$('.summit-ultra-collection-fabrics').css('display', 'block');
 	});
 	
 	$('.summit-finish-tab').on('click', function() {
 		$('.summit-endurance-fabrics').css('display', 'none');
 		$('.summit-ultra-collection-fabrics').css('display', 'none');
-		$('.summit-nina-campbell-fabrics').css('display', 'none');
 		$('.summit-finishes').css('display', 'block');
 	});
 	

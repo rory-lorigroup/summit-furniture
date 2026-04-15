@@ -7,7 +7,7 @@
 
 get_header();
 $args = array(
-  'taxonomy' => 'type',
+  'taxonomy' => 'product_cat',
   'hide_empty' => false,
   'hierarchical' => false,
   'orderby' => 'meta_value_num',
@@ -35,7 +35,7 @@ $terms = get_terms($args);
 		<div class="summit-types-wrap">
 			<header class="summit-furniture-header">
 				<h1>
-					Types
+					<?php esc_html_e('Categories', 'summit-furniture'); ?>
 				</h1>
 			</header>
 			<div class="summit-types-grid">
