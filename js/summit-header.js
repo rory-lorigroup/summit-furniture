@@ -20,32 +20,6 @@ $('select').select2();
 $("input").attr("autocomplete", "off");
 $('input').attr('aria-autocomplete', 'none');
 
-// $(document).ready(function(){
-// 	const firstVisit = getCookie('summitFirstVisit');
-// 	console.log(firstVisit);
-// 	if ( firstVisit === null ) {
-// 		setCookie('summitFirstVisit', 'firstVisit', '30');
-// 		$('.summit-intro-cover').css('z-index', '10000');
-// 		$('.summit-intro-cover').css('opacity', '1');
-// 		$('body').addClass('no-scroll');
-// 		setTimeout(() => {
-// 			$('.summit-intro-cover h2').addClass('fadeIn')
-// 		}, 750)
-// 		setTimeout(() => {
-// 			$('.site').addClass('fadeIn');
-// 			$('.summit-intro-cover').addClass('fadeOut');
-// 			$('body').removeClass('no-scroll');
-// 		}, 4500);
-// 		setTimeout(() => {
-// 			$('.summit-intro-cover').css('z-index', '-100000');
-// 		}, 5500);
-// 	} else {
-// 		$('.summit-intro-cover').css('z-index', '-100000');
-// 		$('.site').css('opacity', '1');
-// 	}
-	
-// });
-
 $(document).ready(function(){
 	$('.summit-search-trigger').on('click', function() {
 		$( 'nav' ).removeClass( "toggled" );
@@ -200,35 +174,45 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Monaco country list (full names, case-insensitive)
 const monacoCountries = [
-  'Monaco', 'France', 'Spain', 'Portugal', 'Italy', 'Turkey', 'Greece', 'Belgium', 'Luxembourg',
+  'Monaco', 'France', 'Spain', 'Portugal', 'Italy', 'Türkiye', 'Greece', 'Belgium', 'Luxembourg',
   'Croatia', 'Slovenia', 'Bosnia and Herzegovina', 'Romania', 'Serbia', 'Bulgaria', 'Cyprus',
   'Israel', 'Jordan', 'Saudi Arabia', 'Kuwait', 'Qatar', 'United Arab Emirates'
 ];
 
+const ukCountries = [
+  'United Kingdom', 'Ireland', 'Norway', 'Switzerland', 'Denmark', 'Finland',
+  'Germany', 'Netherlands', 'Sweden', 'Austria', 'Russian Federation', 'Poland',
+  'Hungary', 'Iceland', 'Czechia', 'Slovakia', 'Moldova', 'Ukraine'
+];
+
 function checkMonacoCountryAndUpdate() {
-  const countrySelect = document.querySelector('.ginput_address_country');
-  const targetInput = document.querySelector('#field_1_13');
+  const countrySelect = document.querySelector('.ginput_address_country select');
+  const targetInput = document.querySelector('#input_2_13');
   if (!countrySelect || !targetInput) return;
 
   const selected = countrySelect.value.trim().toLowerCase();
-  const isMonaco = monacoCountries.some(
-    c => c.toLowerCase() === selected
-  );
+  const isMonaco = monacoCountries.some(c => c.toLowerCase() === selected);
+  const isUK = ukCountries.some(c => c.toLowerCase() === selected);
 
   if (isMonaco) {
-    targetInput.value = 'Monaco Group';
+    targetInput.value = '4148';
+  } else if (isUK) {
+    targetInput.value = '4149';
   } else {
-    targetInput.value = '';
+    targetInput.value = '4150';
   }
 }
 
-// Run on page load and whenever the country changes
-document.addEventListener('DOMContentLoaded', function() {
-  const countrySelect = document.querySelector('.ginput_address_country');
-  if (countrySelect) {
-    countrySelect.addEventListener('change', checkMonacoCountryAndUpdate);
-    checkMonacoCountryAndUpdate();
-  }
-});
+function bindMonacoCountryWatcher() {
+  const $countrySelect = $('.ginput_address_country select');
+  const $targetInputWrap = $('#field_2_13');
+  if (!$countrySelect.length) return;
+  $targetInputWrap.hide();
+  $countrySelect.off('change.monaco').on('change.monaco', checkMonacoCountryAndUpdate);
+  checkMonacoCountryAndUpdate();
+}
+
+// Run on page load and re-bind after Gravity Forms AJAX re-renders
+$(document).ready(bindMonacoCountryWatcher);
+$(document).on('gform_post_render', bindMonacoCountryWatcher);
