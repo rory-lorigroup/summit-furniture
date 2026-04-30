@@ -199,3 +199,36 @@ document.addEventListener('click', function(event) {
         }
     }
 });
+
+// Monaco country list (full names, case-insensitive)
+const monacoCountries = [
+  'Monaco', 'France', 'Spain', 'Portugal', 'Italy', 'Turkey', 'Greece', 'Belgium', 'Luxembourg',
+  'Croatia', 'Slovenia', 'Bosnia and Herzegovina', 'Romania', 'Serbia', 'Bulgaria', 'Cyprus',
+  'Israel', 'Jordan', 'Saudi Arabia', 'Kuwait', 'Qatar', 'United Arab Emirates'
+];
+
+function checkMonacoCountryAndUpdate() {
+  const countrySelect = document.querySelector('.ginput_address_country');
+  const targetInput = document.querySelector('#field_1_13');
+  if (!countrySelect || !targetInput) return;
+
+  const selected = countrySelect.value.trim().toLowerCase();
+  const isMonaco = monacoCountries.some(
+    c => c.toLowerCase() === selected
+  );
+
+  if (isMonaco) {
+    targetInput.value = 'Monaco Group';
+  } else {
+    targetInput.value = '';
+  }
+}
+
+// Run on page load and whenever the country changes
+document.addEventListener('DOMContentLoaded', function() {
+  const countrySelect = document.querySelector('.ginput_address_country');
+  if (countrySelect) {
+    countrySelect.addEventListener('change', checkMonacoCountryAndUpdate);
+    checkMonacoCountryAndUpdate();
+  }
+});
