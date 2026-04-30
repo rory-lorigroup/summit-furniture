@@ -188,7 +188,7 @@ const ukCountries = [
 
 function checkMonacoCountryAndUpdate() {
   const countrySelect = document.querySelector('.ginput_address_country select');
-  const targetInput = document.querySelector('#input_2_13');
+  const targetInput = document.querySelector('#input_1_13');
   if (!countrySelect || !targetInput) return;
 
   const selected = countrySelect.value.trim().toLowerCase();
@@ -206,7 +206,7 @@ function checkMonacoCountryAndUpdate() {
 
 function bindMonacoCountryWatcher() {
   const $countrySelect = $('.ginput_address_country select');
-  const $targetInputWrap = $('#field_2_13');
+  const $targetInputWrap = $('#field_1_13');
   if (!$countrySelect.length) return;
   $targetInputWrap.hide();
   $countrySelect.off('change.monaco').on('change.monaco', checkMonacoCountryAndUpdate);
