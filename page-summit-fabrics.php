@@ -109,24 +109,16 @@ get_header();
 							),
 						),
 						'meta_query'     => array(
-							// Not Ultra: either meta not set OR value != 1
+							'relation' => 'OR',
 							array(
-								'relation' => 'OR',
-								array(
-									'key'     => 'ultra_collection',
-									'compare' => 'NOT EXISTS',
-								),
-								array(
-									'key'     => 'ultra_collection',
-									'value'   => '1',
-									'compare' => '!=',
-									'type'    => 'NUMERIC',
-								),
+								'key'     => 'ultra_collection',
+								'compare' => 'NOT EXISTS',
 							),
-									'value'   => '1',
-									'compare' => '!=',
-									'type'    => 'NUMERIC',
-								),
+							array(
+								'key'     => 'ultra_collection',
+								'value'   => '1',
+								'compare' => '!=',
+								'type'    => 'NUMERIC',
 							),
 						),
 					);

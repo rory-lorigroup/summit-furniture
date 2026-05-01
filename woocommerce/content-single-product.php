@@ -134,39 +134,7 @@ if ( post_password_required() ) {
 			<?php endif; ?>
 
 			
-		    <!-- Promo Banner -->
-			<?php
-			$enable_promo = get_field( 'enable_promo', $post_ID );
-			if ( $enable_promo ) :
-				$promo_image     = get_field( 'promo_image', $post_ID );
-				$promo_headline  = get_field( 'promo_headline', $post_ID );
-				$promo_subhead   = get_field( 'promo_subhead', $post_ID );
-				$promo_fine_print = get_field( 'promo_fine_print', $post_ID );
-			?>
-				<div class="summit-promo-banner">
-					<?php if ( $promo_image ) : ?>
-						<div class="promo-image">
-							<img src="<?php echo esc_url( $promo_image ); ?>" alt="<?php echo esc_attr( $promo_headline ); ?>" />
-						</div>
-					<?php endif; ?>
-					<div class="promo-content">
-						<?php if ( $promo_headline ) : ?>
-							<div class="promo-headline"><?php echo wp_kses_post( $promo_headline ); ?></div>
-						<?php endif; ?>
-						<?php if ( $promo_subhead ) : ?>
-							<div class="promo-subhead"><?php echo wp_kses_post( $promo_subhead ); ?></div>
-						<?php endif; ?>
-						<?php if ( $promo_fine_print ) : ?>
-							<div class="promo-fine-print"><?php echo wp_kses_post( $promo_fine_print ); ?></div>
-						<?php endif; ?>
-					</div>
-				</div>
-			<?php endif; ?>
-						
-			
-			
-			
-		    <!-- Promo Banner -->
+			<!-- Promo Banner -->
 			<?php
 			$enable_promo = get_field( 'enable_promo', $post_ID );
 			if ( $enable_promo ) :
@@ -413,23 +381,16 @@ if ( post_password_required() ) {
 											),
 										),
 										'meta_query'     => array(
+											'relation' => 'OR',
 											array(
-												'relation' => 'OR',
-												array(
-													'key'     => 'ultra_collection',
-													'compare' => 'NOT EXISTS',
-												),
-												array(
-													'key'     => 'ultra_collection',
-													'value'   => '0',
-													'compare' => '=',
-													'type'    => 'NUMERIC',
-												),
+												'key'     => 'ultra_collection',
+												'compare' => 'NOT EXISTS',
 											),
-													'value'   => '0',
-													'compare' => '=',
-													'type'    => 'NUMERIC',
-												),
+											array(
+												'key'     => 'ultra_collection',
+												'value'   => '0',
+												'compare' => '=',
+												'type'    => 'NUMERIC',
 											),
 										),
 									);
