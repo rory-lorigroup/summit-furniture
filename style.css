@@ -424,16 +424,19 @@ html {
 @font-face {
   font-family: 'Summit';
   src: url("/wp-content/themes/summit-furniture/fonts/TrajanPro-Regular.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Chronicle';
   src: url("/wp-content/themes/summit-furniture/fonts/ChronicleDisplayLight/font.woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'ChronicleLt';
   src: url("/wp-content/themes/summit-furniture/fonts/ChronicleDisplayXLight/font.woff");
+  font-display: swap;
 }
 
 
