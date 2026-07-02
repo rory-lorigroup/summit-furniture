@@ -424,16 +424,63 @@ html {
 @font-face {
   font-family: 'Summit';
   src: url("/wp-content/themes/summit-furniture/fonts/TrajanPro-Regular.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Chronicle';
   src: url("/wp-content/themes/summit-furniture/fonts/ChronicleDisplayLight/font.woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'ChronicleLt';
   src: url("/wp-content/themes/summit-furniture/fonts/ChronicleDisplayXLight/font.woff");
+  font-display: swap;
+}
+
+/* Self-hosted Roboto */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/wp-content/themes/summit-furniture/fonts/roboto-100.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/wp-content/themes/summit-furniture/fonts/roboto-300.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/wp-content/themes/summit-furniture/fonts/roboto-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/wp-content/themes/summit-furniture/fonts/roboto-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/wp-content/themes/summit-furniture/fonts/roboto-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/wp-content/themes/summit-furniture/fonts/roboto-900.woff2") format("woff2");
 }
 
 
