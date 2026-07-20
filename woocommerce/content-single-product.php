@@ -111,8 +111,8 @@ if ( post_password_required() ) {
 			<?php // Pricing and Login Messaging ?>
 			<?php if ( ! is_user_logged_in() ) : ?>
 				<?php if ( 'furniture' === $post_type ) : ?>
-					<p>To request a quote or place an order, please contact your <a href="/sales" style="text-decoration: underline">Summit Sales Representative.</a>  To receive the benefits of being a Trade Program member, including a special discount on all Summit products, click <a href="/trade-account/" style="text-decoration: underline">here.</a></p>
-					<a style="font-weight: bold" href="mailto:sales@summitfurniture.com?subject=Product Inquiry&body=Please send me more information about <?php echo esc_attr( $product_sku ); ?> and information on how to place an order.">Place an order or inquire</a>
+					<p><strong>To request a quote, fabric sample, or place an order, please contact your <a href="/sales" style="text-decoration: underline">Summit Sales Representative.</a></strong></p>
+					<p>Qualified Trade Program members enjoy preferred pricing across the Summit collection. Register <a href="/trade-account/" style="text-decoration: underline">here</a>.</p>
 					<?php if ( '1' === $quick_ship ) : ?>
 						<p><?php esc_html_e( 'All product available through the Quick Ship program is shipped from the US. Contact Summit Sales for information on all our Quick Ship available items.' ); ?></p>
 					<?php endif; ?>
@@ -126,9 +126,10 @@ if ( post_password_required() ) {
 					$user_role    = $current_user->roles;
 					if ( in_array( 'trade', $user_role, true ) ) :
 					?>
-						<p>To request a discounted quote as a Trade Program member or to place an order, please contact your <a href="/trade-account/" style="text-decoration: underline">Summit Sales Representative.</a></p>
+						<p><strong>To request a discounted quote, fabric sample, or place an order as a Trade Program member, please contact your <a href="/trade-account/" style="text-decoration: underline">Summit Sales Representative.</a></strong></p>
 					<?php else : ?>
-						<p>To request a quote or place an order, please contact your <a href="/sales" style="text-decoration: underline">Summit Sales Representative.</a>  To receive the benefits of being a Trade Program member, including a special discount on all Summit products, click <a href="/trade-account/" style="text-decoration: underline">here.</a></p>
+						<p><strong>To request a quote, fabric sample, or place an order, please contact your <a href="/sales" style="text-decoration: underline">Summit Sales Representative.</a></strong></p>
+						<p>Qualified Trade Program members enjoy preferred pricing across the Summit collection. Register <a href="/trade-account/" style="text-decoration: underline">here</a>.</p>
 					<?php endif; ?>
 				<?php endif; ?>
 			<?php endif; ?>
@@ -167,19 +168,6 @@ if ( post_password_required() ) {
 			
 		</div><!-- /.summit-product -->
 
-		<?php // Short Collection Description ?>
-		<?php
-		if ( ! empty( $terms ) && strtolower( $collection_slug ) !== 'toulon' ) :
-			$term              = $terms[0];
-			$termID            = $term->term_id;
-			$short_description = wp_strip_all_tags( get_field( 'archive_content', 'product-collection_' . $termID ) );
-			if ( ! empty( $short_description ) ) :
-		?>
-			<p class="summit-short-collection"><?php echo esc_html( $short_description ); ?></p>
-		<?php
-			endif;
-		endif;
-		?>
 
 		<?php // Fabric Details ?>
 		<?php if ( 'fabric' === $post_type && ( get_field( 'width' ) || get_field( 'repeat' ) || get_field( 'abrasion' ) ) ) : ?>
